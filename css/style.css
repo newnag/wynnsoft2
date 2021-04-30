@@ -154,6 +154,13 @@ select:focus, button:focus, input:focus, textarea:focus {
 @media screen and (min-width: 1024px) {
   .header {
     height: 128px;
+    z-index: 6;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header {
+    border-bottom: 1px solid #001981;
   }
 }
 
@@ -165,11 +172,18 @@ select:focus, button:focus, input:focus, textarea:focus {
   .header .logo {
     width: 200px;
   }
+  .header .logo img {
+    width: 153px;
+    height: 112px;
+    margin: auto;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .header .logo {
-    margin-left: 6em;
+    margin-left: 4em;
+    position: relative;
+    z-index: 6;
   }
   .header .logo img {
     width: 163px;
@@ -201,15 +215,15 @@ select:focus, button:focus, input:focus, textarea:focus {
 
 @media screen and (min-width: 1024px) {
   .header nav {
-    padding-left: 8px;
+    padding-left: 20px;
   }
   .header nav:before {
     content: '';
     position: absolute;
     top: 0;
-    left: -6px;
+    left: 8px;
     height: 100%;
-    width: 20px;
+    width: 30px;
     background: #fff;
     -webkit-transform: skewX(-10deg);
             transform: skewX(-10deg);
@@ -225,6 +239,7 @@ select:focus, button:focus, input:focus, textarea:focus {
   .header nav:before {
     left: 5px;
     width: 30px;
+    z-index: 1;
   }
 }
 
@@ -395,32 +410,49 @@ select:focus, button:focus, input:focus, textarea:focus {
     display: -ms-flexbox;
     display: flex;
     height: 50%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-left: 2em;
   }
   .header nav .menu-nav .top-menu li {
-    margin: 0 .5em;
+    margin: 0 8px;
   }
 }
 
 @media screen and (min-width: 1024px) and (min-width: 1280px) {
   .header nav .menu-nav .top-menu li {
-    margin: 0 .8em;
+    margin: 0 .7em;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1536px) {
+  .header nav .menu-nav .top-menu li {
+    margin: 0 1.3em;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .header nav .menu-nav .top-menu li.nav-menu-active {
-    padding: 0 5px;
+    padding: 0 10px;
     border-radius: 10px;
   }
   .header nav .menu-nav .top-menu li a {
     color: #fff;
+    font-size: .8em;
   }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1280px) {
+  .header nav .menu-nav .top-menu li a {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .header nav .menu-nav .top-menu li .submenu {
     display: none;
   }
@@ -430,12 +462,22 @@ select:focus, button:focus, input:focus, textarea:focus {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1280px) {
+  .header nav .menu-nav .top-menu .assismenu {
+    margin: 0 1.3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .header nav .menu-nav .top-menu .assismenu .signin span {
     margin-left: 3px;
     color: #fff;
   }
   .header nav .menu-nav .top-menu .assismenu .lang {
     margin: 0 1em;
+    cursor: pointer;
   }
   .header nav .menu-nav .top-menu .assismenu .lang span {
     margin-left: 3px;
@@ -447,6 +489,32 @@ select:focus, button:focus, input:focus, textarea:focus {
     left: 0;
     background: #2792E0;
   }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1280px) {
+  .header nav .menu-nav .top-menu .assismenu .lang .list-lang {
+    top: 412%;
+  }
+  .header nav .menu-nav .top-menu .assismenu .lang .list-lang:before {
+    content: '';
+    position: absolute;
+    top: -89px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1280px) and (hover: hover) {
+  .header nav .menu-nav .top-menu .assismenu .lang .list-lang li a:hover {
+    color: #FFD965;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .header nav .menu-nav .top-menu .assismenu .lang .list-lang.show {
     display: block;
   }
@@ -463,6 +531,7 @@ select:focus, button:focus, input:focus, textarea:focus {
     background: #fff;
     padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
   }
   .header nav .menu-nav .top-menu .assismenu .contact .button-contact .phone {
     margin: 0 2px;
@@ -483,6 +552,25 @@ select:focus, button:focus, input:focus, textarea:focus {
     padding: .5em 1em;
     display: none;
   }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1280px) {
+  .header nav .menu-nav .top-menu .assismenu .contact .text-contact {
+    left: -100px;
+    top: 412%;
+  }
+  .header nav .menu-nav .top-menu .assismenu .contact .text-contact:after {
+    content: '';
+    position: absolute;
+    top: -88px;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 4;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .header nav .menu-nav .top-menu .assismenu .contact .text-contact.show {
     display: block;
     -webkit-transition: .3s;
@@ -511,6 +599,60 @@ select:focus, button:focus, input:focus, textarea:focus {
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;
+    position: relative;
+  }
+  .header nav .menu-nav .top-menu li:hover > a {
+    color: #FFD965;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .header nav .menu-nav .top-menu li:hover .submenu {
+    top: 128px;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .header nav .menu-nav .top-menu li .submenu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2em;
+    position: absolute;
+    top: -500%;
+    left: 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 1em 2em;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3AACFF), to(#001981));
+    background: linear-gradient(#3AACFF, #001981);
+    border-radius: 0 0 10px 10px;
+    z-index: -1;
+  }
+  .header nav .menu-nav .top-menu li .submenu .list-menu p {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+  .header nav .menu-nav .top-menu li .submenu .list-menu li {
+    margin: .75em 0;
+  }
+  .header nav .menu-nav .top-menu li .submenu .list-menu li:before {
+    content: attr(data-list);
+    margin-right: 3px;
+    color: #fff;
+  }
+  .header nav .menu-nav .top-menu > li:hover:before {
+    content: '';
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 370px;
+    height: 100px;
+    z-index: 6;
   }
   .header nav .menu-nav .top-menu .other .hamburger {
     cursor: pointer;
@@ -522,7 +664,34 @@ select:focus, button:focus, input:focus, textarea:focus {
     margin: 5px 0;
   }
   .header nav .menu-nav .top-menu .other ul {
-    display: none;
+    position: absolute;
+    top: -100%;
+    right: 8%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    background-color: #2792E0;
+    padding: .5em 0;
+    z-index: -1;
+  }
+  .header nav .menu-nav .top-menu .other ul.show {
+    top: 128px;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .header nav .menu-nav .top-menu .other ul li {
+    margin: .5em 1em;
+  }
+}
+
+@media screen and (min-width: 1280px) and (hover: hover) {
+  .header nav .menu-nav .top-menu .other ul li:hover a {
+    color: #FFD965;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
 }
 
@@ -587,6 +756,13 @@ select:focus, button:focus, input:focus, textarea:focus {
     font-weight: 700;
     font-size: 1.2em;
     text-decoration: underline;
+    cursor: pointer;
+  }
+  .header nav .menu-nav .bottom-menu li .submenu .list-menu li {
+    display: none;
+  }
+  .header nav .menu-nav .bottom-menu li .submenu .list-menu li.show {
+    display: block;
   }
 }
 
@@ -596,21 +772,22 @@ select:focus, button:focus, input:focus, textarea:focus {
     display: -ms-flexbox;
     display: flex;
     height: 50%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-left: 1em;
   }
   .header nav .menu-nav .bottom-menu > li {
-    margin: 0 .5em;
+    margin: 0 .7em;
   }
 }
 
 @media screen and (min-width: 1024px) and (min-width: 1280px) {
   .header nav .menu-nav .bottom-menu > li {
-    margin: 0 1em;
+    margin: 0 .8em;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -625,8 +802,23 @@ select:focus, button:focus, input:focus, textarea:focus {
 @media screen and (min-width: 1024px) {
   .header nav .menu-nav .bottom-menu > li a {
     color: #fff;
-    font-size: .8em;
+    font-size: .7em;
   }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1280px) {
+  .header nav .menu-nav .bottom-menu > li a {
+    font-size: .9em;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1536px) {
+  .header nav .menu-nav .bottom-menu > li a {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .header nav .menu-nav .bottom-menu > li .submenu {
     display: none;
   }
@@ -634,7 +826,7 @@ select:focus, button:focus, input:focus, textarea:focus {
 
 @media screen and (min-width: 1280px) {
   .header nav .menu-nav .bottom-menu {
-    padding-left: 2em;
+    padding-left: 1em;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -850,5 +1042,49 @@ select:focus, button:focus, input:focus, textarea:focus {
 main {
   min-height: calc(100vh - 128px);
   margin-top: 128px;
+}
+
+.nav-footer {
+  height: 503px;
+  width: 100%;
+}
+
+.nav-footer .grid-menu-footer .box figure img {
+  width: 100%;
+}
+
+.nav-footer .grid-menu-footer .box .list p {
+  font-size: 1.3em;
+  font-weight: 500px;
+  margin-bottom: .5em;
+}
+
+.nav-footer .grid-menu-footer .box .list ul li {
+  margin: .25em 0;
+}
+
+.nav-footer .grid-menu-footer .box .list ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-footer .grid-menu-footer .box .list ul li a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.footer {
+  background-color: #2792E0;
+}
+
+.footer p {
+  color: #fff;
+  text-align: center;
+  padding: 3px 0;
 }
 /*# sourceMappingURL=style.css.map */
