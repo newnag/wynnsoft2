@@ -12,13 +12,13 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <!-- style -->
-  <link rel="stylesheet" href="/css/style.min.css?v=0.1.12">
-  <link rel="stylesheet" href="/css/home.min.css">
+  <link rel="stylesheet" href="/css/style.min.css?v=0.1.13">
+  <link rel="stylesheet" href="/css/home.min.css?v=0.1.1">
 </head>
 <body>
   <!-- ส่วนหัว -->
   <header>
-    <ul class="header flex">
+    <div class="header container mx-auto flex">
       <div class="logo p-2 xl:p-0 xl:m-auto"><a href="/template/home.html"><img class="w-auto h-full" src="/img/logo/logo1.png" alt=""></a></div>
       <nav class="relative">
         <div class="menu-nav">
@@ -291,6 +291,10 @@
         </div>
       </nav>
     </div>
+    <div class="bg-head">
+      <div class="top"></div>
+      <div class="bottom"></div>
+    </div>
   </header>
 
   <main>
@@ -299,20 +303,59 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <figure><img src="/img/slide.png" alt=""></figure>
+            <div class="title-slide"><h2>Website Design</h2></div>
+            <div class="txt1">
+              <p>Responsive</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              </p>
+            </div>
+            <div class="txt2">
+              <p>Responsive</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              </p>
+            </div>
           </div>
           <div class="swiper-slide">
             <figure><img src="/img/slide.png" alt=""></figure>
+            <div class="title-slide"><h2>Website Design2</h2></div>
+            <div class="txt1">
+              <p>Responsive2</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit222. 
+              </p>
+            </div>
+            <div class="txt2">
+              <p>Responsive2</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit222. 
+              </p>
+            </div>
           </div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next" onclick="check_current_slide()"></div>
+        <div class="swiper-button-prev" onclick="check_current_slide()"></div>
+      </div>
+
+      <div class="pagi">
+        <span class="current"></span>
+        <span>/</span>
+        <span class="total"></span>
+      </div>
+
+      <div class="social">
+        <div class="list"><a href=""><img src="/img/icon/line.svg" alt=""></a></div>
+        <div class="list"><a href=""><img src="/img/icon/sosial-03.svg" alt=""></a></div>
+        <div class="list"><a href=""><img src="/img/icon/sosial-04.svg" alt=""></a></div>
+        <div class="list"><a href=""><img src="/img/icon/sosial-02.svg" alt=""></a></div>
       </div>
     </div>
   </main>
 
   <footer>
     <div class="nav-footer container mx-auto">
-      <div class="grid-menu-footer grid grid-cols-4 gap-x-28">
+      <div class="grid-menu-footer grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-28">
         <div class="box grid gap-y-2">
           <figure><img src="/img/logo/logo1.png" alt=""></figure>
           <div class="address">
@@ -409,7 +452,7 @@
   </footer>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="/js/main.js?v=0.1.4"></script>
-  <script src="/js/home.js?v=0.1.3"></script>
+  <script src="/js/main.js?v=0.1.5"></script>
+  <script src="/js/home.js?v=0.1.4"></script>
 </body>
 </html>

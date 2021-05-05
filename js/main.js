@@ -31,9 +31,11 @@ function open_contact(that){
 // เปิดเมนูของมือถือ
 function open_mobile_menu(){
   document.querySelector('.header .menu-nav').classList.add('show')
+  document.querySelector('body').style.position = "fixed"
 }
 // ปิดเมนูมือถือ
 function close_mobile_menu(){
+  document.querySelector('body').style.position = "unset"
   document.querySelector('.header .menu-nav').classList.remove('show')
 }
 

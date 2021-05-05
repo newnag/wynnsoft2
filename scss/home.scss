@@ -1,6 +1,26 @@
+@import "variable";
+
 .homepage{
+  position: relative;
+
   .slide-home{
-    max-height: 800px;
+    max-height: 200px;
+
+    @media screen and (min-width:$sm){
+      max-height: 280px;
+    }
+    @media screen and (min-width:$md){
+      max-height: 320px;
+    }
+    @media screen and (min-width:$lg){
+      max-height: 400px;
+    }
+    @media screen and (min-width:$xl){
+      max-height: 600px;
+    }
+    @media screen and (min-width:$xxl){
+      max-height: 800px;
+    }
     
     .swiper-wrapper{
       .swiper-slide{
@@ -9,7 +29,192 @@
 
           img{
             width: 100%;
-            height: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 400px;
+
+            @media screen and (min-width:$xl){
+              max-width: 1900px;
+              max-height: 800px;
+            }
+          }
+        }
+
+        .title-slide{
+          @media screen and (max-width:($md)-1px){
+            display: none;
+          }
+
+          position: absolute;
+          top: 5%;
+          left: 5%;
+          width: 150px;
+          height: 4em;
+          overflow: hidden;
+
+          @media screen and (min-width:$xl){
+            width: 200px;
+            height: 8em;
+          }
+          @media screen and (min-width:$xxl){
+            left: 0%;
+          }
+
+          h2{
+            font-size: 1.2em;
+
+            @media screen and (min-width:$xl){
+              font-size: 2em;
+            }
+            @media screen and (min-width:$xxl){
+              font-size: 2.4em;
+            }
+          }
+        }
+
+        .txt1{
+          @media screen and (max-width:($md)-1px){
+            display: none;
+          }
+
+          position: absolute;
+          top: 5%;
+          right: 10%;
+          width: 200px;
+          height: 8em;
+          overflow: hidden;
+
+          @media screen and (min-width:$lg){
+            right: 25%;
+          }
+
+          p{
+            &:first-child{
+              font-weight: 500;
+              margin-bottom: .25em;
+
+              @media screen and (min-width:$xxl){
+                font-size: 1.4em;
+              }
+            }
+            &:last-child{
+              font-size: .8em;
+
+              @media screen and (min-width:$xxl){
+                font-size: 1em;
+              }
+            }
+          }
+        }
+        .txt2{
+          @media screen and (max-width:($lg)-1px){
+            display: none;
+          }
+
+          position: absolute;
+          top: 5%;
+          right: 6%;
+          width: 200px;
+          height: 8em;
+          overflow: hidden;
+
+          @media screen and (min-width:$xxl){
+            right: 10%;
+          }
+
+          p{
+            &:first-child{
+              font-weight: 500;
+              margin-bottom: .25em;
+
+              @media screen and (min-width:$xxl){
+                font-size: 1.4em;
+              }
+            }
+            &:last-child{
+              font-size: .8em;
+
+              @media screen and (min-width:$xxl){
+                font-size: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Arrow
+    .swiper-button-next{
+      color: $black;
+      transform: rotate(90deg);
+      top: 65%;
+
+      @media screen and (min-width:$xxl) {
+        top: 60%;
+      }
+
+      &:after{
+        font-size: 1.4em;
+      }
+    }
+    .swiper-button-prev{
+      color: $black;
+      transform: rotate(90deg);
+      right: 10px;
+      left: unset;
+
+      &:after{
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  .pagi{
+    position: absolute;
+    top: 25%;
+    right: 1%;
+
+    .current{
+      font-size: 1.4em;
+      font-weight: 600;
+      color: $yellow;
+
+      @media screen and (min-width:$xxl){
+        font-size: 2.2em;
+      }
+    }
+
+    .total{
+      font-size: .8em;
+
+      @media screen and (min-width:$xxl){
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .social{
+    @media screen and (max-width:($md)-1px){
+      display: none;
+    }
+
+    position: absolute;
+    bottom: 10%;
+    right: 1%;
+    z-index: 1;
+    display: flex;
+
+    .list{
+      margin: 0 .5em;
+
+      a{
+        img{
+          width: 15px;
+          height: 15px;
+
+          @media screen and (min-width:$xxl) {
+            width: 20px;
+            height: 20px;
           }
         }
       }
