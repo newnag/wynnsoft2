@@ -13,6 +13,29 @@ function slide_home(){
   });
 }
 
+// สไลด์บริการ
+function slide_service(){
+  let swiper = new Swiper(".slide-service", {
+    spaceBetween: 30,
+    centeredSlides: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints:{
+      640:{
+        slidesPerView: 1,
+      },
+      768:{
+        slidesPerView: 2,
+      },
+      1024:{
+        slidesPerView: 3,
+      }
+    }
+  });
+}
+
 // นับจำนวนสไลด์
 function count_slide(){
   let target = document.querySelector('.homepage .pagi .total')
@@ -38,3 +61,4 @@ function check_current_slide(){
 
 slide_home()
 count_slide()
+slide_service()

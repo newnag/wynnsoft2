@@ -43,7 +43,7 @@ function close_mobile_menu(){
 // เปิด sub เมนู
 function open_nav_submenu(that){
   // เช็ค Device Mobile
-  if(/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  if(/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || screen.width < 1280){
     that.classList.toggle('active')
     that.nextElementSibling.classList.toggle('show')
   }
