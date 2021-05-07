@@ -24,9 +24,63 @@ function slide_service(){
     },
     breakpoints:{
       640:{
-        slidesPerView: 1,
+        slidesPerView: 2,
       },
       768:{
+        slidesPerView: 2,
+      },
+      1024:{
+        slidesPerView: 3,
+      }
+    }
+  });
+}
+
+// สไลด์เลือกแพ็คเกจ
+function slide_all_package(){
+  let swiper = new Swiper(".all-package", {
+    spaceBetween: 50,
+    breakpoints:{
+      320:{
+        slidesPerView: 2,
+      },
+      640:{
+        slidesPerView: 2,
+      },
+      768:{
+        slidesPerView: 3
+      }
+    }
+  });
+}
+
+// สไลด์ตัวกดเลือกแพ็คเกจ
+function select_type_package(that){
+  document.querySelectorAll('.package .select-package .all-package .swiper-wrapper .swiper-slide').forEach(Ele=>{
+    Ele.classList.remove('active')
+  })
+  let element = that.closest('.swiper-slide')
+  element.classList.add('active')
+
+  // แสดงแพ็คเกจที่กดเลือก
+  // let type_package = `package${element.getAttribute('data-package')}`
+  // document.querySelectorAll('.package .select-package .grid-package').forEach(PACK=>{
+  //   PACK.classList.add('disable')
+  // })
+
+  // document.querySelector(`#${type_package}`).classList.remove('disable')
+}
+
+// สไลด์ตัวแพ็คเกจ
+function select_package(){
+  let swiper = new Swiper(".grid-package", {
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints:{
+      640:{
         slidesPerView: 2,
       },
       1024:{
@@ -62,3 +116,5 @@ function check_current_slide(){
 slide_home()
 count_slide()
 slide_service()
+slide_all_package()
+select_package()
