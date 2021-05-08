@@ -90,6 +90,34 @@ function select_package(){
   });
 }
 
+// สไลด์ผลงานของเรา
+function slide_port(){
+  let swiper = new Swiper(".port-slide", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    coverflowEffect: {
+      rotate: 30,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
+    breakpoints:{
+      768:{
+        slidesPerView: "3",
+      },
+      1024:{
+        slidesPerView: "5",
+      }
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+  });
+}
+
 // นับจำนวนสไลด์
 function count_slide(){
   let target = document.querySelector('.homepage .pagi .total')
@@ -118,3 +146,4 @@ count_slide()
 slide_service()
 slide_all_package()
 select_package()
+slide_port()

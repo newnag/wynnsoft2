@@ -114,6 +114,15 @@ select,button,input,textarea{
     background: $white;
     padding: 5px 40px 5px 15px;
   }
+
+  &.textarea{
+    width: 100%;
+    border: 1px solid #707070;
+    border-radius: 18px;
+    background: $white;
+    padding: 10px;
+    resize: none;
+  }
 }
 
 .nav-menu-active{
@@ -131,6 +140,12 @@ select,button,input,textarea{
   h2{
     font-size: 2em;
   }
+
+  &.blue{
+    h2,p{
+      color: $text-w;
+    }
+  }
 }
 
 /////////////////////////////////////////////////////////////////
@@ -143,6 +158,7 @@ header{
   left: 0;
   width: 100%;
   z-index: 6;
+  background: $white;
 
   @media screen and (min-width:$xl){
     border-bottom: 1px solid $darkblue;
@@ -1066,6 +1082,7 @@ main{
 .nav-footer{
   height: max-content;
   width: 100%;
+  margin-top: 1em;
 
   @media screen and (min-width:$xl){
     height: 503px;

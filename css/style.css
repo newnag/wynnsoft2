@@ -144,6 +144,15 @@ select:focus, button:focus, input:focus, textarea:focus {
   padding: 5px 40px 5px 15px;
 }
 
+.form-component.textarea {
+  width: 100%;
+  border: 1px solid #707070;
+  border-radius: 18px;
+  background: #fff;
+  padding: 10px;
+  resize: none;
+}
+
 .nav-menu-active {
   background: #FFD965;
 }
@@ -161,12 +170,17 @@ select:focus, button:focus, input:focus, textarea:focus {
   font-size: 2em;
 }
 
+.title-content.blue h2, .title-content.blue p {
+  color: #fff;
+}
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 6;
+  background: #fff;
 }
 
 @media screen and (min-width: 1280px) {
@@ -1203,6 +1217,7 @@ main {
   height: -moz-max-content;
   height: max-content;
   width: 100%;
+  margin-top: 1em;
 }
 
 @media screen and (min-width: 1280px) {
