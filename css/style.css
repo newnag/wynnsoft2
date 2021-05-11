@@ -56,6 +56,10 @@ select:focus, button:focus, input:focus, textarea:focus {
   outline: none;
 }
 
+li {
+  list-style: none;
+}
+
 .form-component.input {
   width: 100%;
   height: 35px;
@@ -157,8 +161,20 @@ select:focus, button:focus, input:focus, textarea:focus {
   background: #FFD965;
 }
 
+@media screen and (max-width: 1023px) {
+  .nav-menu-active {
+    background: #001981;
+  }
+}
+
 .nav-menu-active a {
   color: #000000 !important;
+}
+
+@media screen and (max-width: 1023px) {
+  .nav-menu-active a {
+    color: #FFD965 !important;
+  }
 }
 
 .title-content {
@@ -172,6 +188,65 @@ select:focus, button:focus, input:focus, textarea:focus {
 
 .title-content.blue h2, .title-content.blue p {
   color: #fff;
+}
+
+.title-page {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 767px) {
+  .title-page h1 {
+    font-size: 2em;
+  }
+}
+
+.title-page .desc {
+  color: #2792E0;
+}
+
+.pagi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2em 0;
+}
+
+.pagi .arrow, .pagi li {
+  margin: 0 0.2em;
+  cursor: pointer;
+  padding: 2px 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .pagi .arrow, .pagi li {
+    margin: 0 0.5em;
+  }
+}
+
+@media (hover: hover) {
+  .pagi .arrow:hover, .pagi li:hover {
+    color: #FFD965;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+}
+
+.pagi .arrow.active, .pagi li.active {
+  background: #FFD965;
+  border-radius: 5px;
+}
+
+.pagi .arrow.active:hover, .pagi li.active:hover {
+  color: #000000;
+}
+
+.pagi .arrow.disable, .pagi li.disable {
+  color: #BBBBBB;
+  cursor: default;
 }
 
 header {
@@ -202,16 +277,26 @@ header .header {
 
 header .header .logo {
   width: 125px;
+  background: #fff;
 }
 
 @media screen and (min-width: 1024px) {
   header .header .logo {
     width: 200px;
+    position: relative;
+    z-index: 7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   header .header .logo img {
-    width: 153px;
-    height: 112px;
-    margin: auto;
+    width: 163px;
+    height: 88px;
+    position: relative;
+    z-index: 7;
   }
 }
 
@@ -228,6 +313,7 @@ header .header .logo {
 
 header .header nav {
   width: 100%;
+  background: #fff;
 }
 
 @media screen and (max-width: 1023px) {
@@ -251,6 +337,7 @@ header .header nav {
 @media screen and (min-width: 1024px) {
   header .header nav {
     padding-left: 20px;
+    z-index: 6;
   }
   header .header nav:before {
     content: '';
@@ -269,7 +356,6 @@ header .header nav {
 @media screen and (min-width: 1280px) {
   header .header nav {
     padding-left: 20px;
-    z-index: 6;
   }
   header .header nav:before {
     left: 0;
@@ -311,11 +397,10 @@ header .header nav {
   }
 }
 
-header .header nav .menu-nav .top-menu {
-  background: #2792E0;
-}
-
 @media screen and (max-width: 1023px) {
+  header .header nav .menu-nav .top-menu {
+    background: #FFD965;
+  }
   header .header nav .menu-nav .top-menu li {
     padding: 1em 0;
     position: relative;
@@ -330,7 +415,7 @@ header .header nav .menu-nav .top-menu {
 
 @media screen and (max-width: 1023px) {
   header .header nav .menu-nav .top-menu li a {
-    color: #fff;
+    color: #000000;
   }
 }
 
@@ -352,7 +437,7 @@ header .header nav .menu-nav .top-menu {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    background: #0F966A;
+    background: #001981;
     z-index: 4;
     display: none;
     -ms-grid-columns: 100%;
@@ -372,6 +457,9 @@ header .header nav .menu-nav .top-menu {
     font-weight: 700;
     font-size: 1.2em;
     text-decoration: underline;
+  }
+  header .header nav .menu-nav .top-menu li .submenu .list-menu li a {
+    color: #fff;
   }
   header .header nav .menu-nav .top-menu .assismenu {
     display: -webkit-box;
@@ -452,6 +540,7 @@ header .header nav .menu-nav .top-menu {
         -ms-flex-align: center;
             align-items: center;
     padding-left: 2em;
+    background: #2792E0;
   }
   header .header nav .menu-nav .top-menu li {
     margin: 0 8px;
@@ -782,11 +871,10 @@ header .header nav .menu-nav .top-menu {
   }
 }
 
-header .header nav .menu-nav .bottom-menu {
-  background: #001981;
-}
-
 @media screen and (max-width: 1023px) {
+  header .header nav .menu-nav .bottom-menu {
+    background: #2792E0;
+  }
   header .header nav .menu-nav .bottom-menu li {
     padding: 1em 0;
     position: relative;
@@ -823,7 +911,7 @@ header .header nav .menu-nav .bottom-menu {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    background: #0F966A;
+    background: #001981;
     z-index: 4;
     display: none;
     -ms-grid-columns: 100%;
@@ -848,6 +936,9 @@ header .header nav .menu-nav .bottom-menu {
   header .header nav .menu-nav .bottom-menu li .submenu .list-menu li {
     display: none;
   }
+  header .header nav .menu-nav .bottom-menu li .submenu .list-menu li a {
+    color: #fff;
+  }
   header .header nav .menu-nav .bottom-menu li .submenu .list-menu li.show {
     display: block;
   }
@@ -866,6 +957,7 @@ header .header nav .menu-nav .bottom-menu {
         -ms-flex-align: center;
             align-items: center;
     padding-left: 1em;
+    background: #001981;
   }
   header .header nav .menu-nav .bottom-menu > li {
     margin: 0 .7em;
@@ -916,7 +1008,7 @@ header .header nav .menu-nav .bottom-menu {
         grid-template-columns: 100%;
     grid-column-gap: 2em;
     position: absolute;
-    top: -1100%;
+    top: -1110%;
     left: 0;
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -1183,7 +1275,7 @@ header .header nav .mobile-menu .line {
   background: #fff;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   header .bg-head {
     position: absolute;
     top: 0;
@@ -1274,6 +1366,22 @@ main {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .nav-footer .grid-menu-footer .box .list p {
+    cursor: pointer;
+  }
+  .nav-footer .grid-menu-footer .box .list p:after {
+    content: '';
+    background: url(/img/icon/plus-circle.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
 .nav-footer .grid-menu-footer .box .list p {
   font-size: 1.3em;
   font-weight: 500px;
@@ -1286,8 +1394,37 @@ main {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .nav-footer .grid-menu-footer .box .list ul {
+    display: none;
+  }
+  .nav-footer .grid-menu-footer .box .list ul.show {
+    display: block;
+  }
+}
+
 .nav-footer .grid-menu-footer .box .list ul li {
   margin: .25em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .nav-footer .grid-menu-footer .box .list ul li {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.nav-footer .grid-menu-footer .box .list ul li:before {
+  content: attr(data-list);
+  margin-right: 3px;
+  color: #000000;
 }
 
 .nav-footer .grid-menu-footer .box .list ul li a {
@@ -1311,6 +1448,12 @@ main {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+}
+
+@media (hover: hover) {
+  .nav-footer .grid-menu-footer .box .list ul li a:hover {
+    color: #2792E0;
+  }
 }
 
 .footer {

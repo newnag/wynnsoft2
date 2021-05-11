@@ -43,10 +43,11 @@ function close_mobile_menu(){
 // เปิด sub เมนู
 function open_nav_submenu(that){
   // เช็ค Device Mobile
-  if(/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || screen.width < 1280){
-    that.classList.toggle('active')
-    that.nextElementSibling.classList.toggle('show')
-  }
+  // if(/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || screen.width < 1280){
+    
+  // }
+  that.classList.toggle('active')
+  that.nextElementSibling.classList.toggle('show')
 }
 // เปิดปิดเมนู other
 function open_other_menu(that){
@@ -60,4 +61,10 @@ function open_li(that){
   that.closest('.list-menu').querySelectorAll('li').forEach(LI => {
     LI.classList.toggle('show')
   });
+}
+
+
+// เปิดเมนู footer มือถือ
+function mobile_open_menu_footer(that){
+  that.closest('.list').querySelector('ul').classList.toggle('show')
 }

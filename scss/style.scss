@@ -31,6 +31,10 @@ select,button,input,textarea{
   }
 }
 
+li{
+  list-style: none;
+}
+
 /////////////////////////////////////////////////////////////////
 //@ class re-use
 /////////////////////////////////////////////////////////////////
@@ -128,8 +132,16 @@ select,button,input,textarea{
 .nav-menu-active{
   background: $yellow;
 
+  @media screen and (max-width:($lg)-1px){
+    background: $darkblue;
+  }
+
   a{
     color: $text-b!important;
+
+    @media screen and (max-width:($lg)-1px){
+      color: $yellow!important;
+    }
   }
 }
 
@@ -144,6 +156,57 @@ select,button,input,textarea{
   &.blue{
     h2,p{
       color: $text-w;
+    }
+  }
+}
+
+.title-page{
+  text-align: center;
+  margin-bottom: 1em;
+
+  h1{
+    @media screen and (max-width:($md)-1px){
+      font-size: 2em;
+    }
+  }
+
+  .desc{
+    color: $blue;
+  }
+}
+
+.pagi{
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+
+  .arrow,li{
+    margin: 0 0.2em;
+    cursor: pointer;
+    padding: 2px 7px;
+
+    @media screen and (min-width:$md){
+      margin: 0 0.5em;
+    }
+
+    @media (hover:hover){
+      &:hover{
+        color: $yellow;
+        transition: .3s;
+      }
+    }
+
+    &.active{
+      background: $yellow;
+      border-radius: 5px;
+
+      &:hover{
+        color: $black;
+      }
+    }
+    &.disable{
+      color: $gray;
+      cursor: default;
     }
   }
 }
@@ -174,14 +237,20 @@ header{
   
     .logo{
       width: 125px;
+      background: $white;
   
       @media screen and (min-width:$lg){
         width: 200px;
+        position: relative;
+        z-index: 7;
+        display: flex;
+        align-items: center;
   
         img{
-          width: 153px;
-          height: 112px;
-          margin: auto;
+          width: 163px;
+          height: 88px;
+          position: relative;
+          z-index: 7;
         }
       }
       @media screen and (min-width:$xl){
@@ -198,6 +267,7 @@ header{
   
     nav{
       width: 100%;
+      background: $white;
   
       @media screen and (max-width:($lg)-1px){
         background: $blue;
@@ -217,6 +287,7 @@ header{
   
       @media screen and (min-width:$lg){
         padding-left: 20px;
+        z-index: 6;
   
         &:before{
           content: '';
@@ -232,7 +303,6 @@ header{
       }
       @media screen and (min-width:$xl){
         padding-left: 20px;
-        z-index: 6;
   
         &:before{
           left: 0;
@@ -266,9 +336,10 @@ header{
         }
   
         .top-menu{
-          background: $blue;
     
           @media screen and (max-width:($lg)-1px){
+            background: $yellow;
+
             li{
               padding: 1em 0;
               position: relative;
@@ -278,7 +349,7 @@ header{
               }
     
               a{
-                color: $text-w;
+                color: $text-b;
   
                 @media screen and (min-width:$md) and (max-width:($xl)-1px){
                   font-size: 1.2em;
@@ -295,7 +366,7 @@ header{
                 top: 100%;
                 width: 100%;
                 height: max-content;
-                background: $green;
+                background: $darkblue;
                 z-index: 4;
                 display: none;
                 grid-template-columns: 100%;
@@ -314,6 +385,12 @@ header{
                     font-weight: 700;
                     font-size: 1.2em;
                     text-decoration: underline;
+                  }
+
+                  li{
+                    a{
+                      color: $text-w;
+                    }
                   }
                 }
               }
@@ -386,6 +463,7 @@ header{
             justify-content: flex-start;
             align-items: center;
             padding-left: 2em;
+            background: $blue;
   
             li{
               margin: 0 8px;
@@ -700,9 +778,10 @@ header{
         }
   
         .bottom-menu{
-          background: $darkblue;
-  
+
           @media screen and (max-width:($lg)-1px){
+            background: $blue;
+
             li{
               padding: 1em 0;
               position: relative;
@@ -729,7 +808,7 @@ header{
                 top: 100%;
                 width: 100%;
                 height: max-content;
-                background: $green;
+                background: $darkblue;
                 z-index: 4;
                 display: none;
                 grid-template-columns: 100%;
@@ -753,6 +832,10 @@ header{
   
                   li{
                     display: none;
+
+                    a{
+                      color: $text-w;
+                    }
   
                     &.show{
                       display: block;
@@ -768,6 +851,7 @@ header{
             justify-content: flex-start;
             align-items: center;
             padding-left: 1em;
+            background: $darkblue;
   
             >li{
               margin: 0 .7em;
@@ -799,7 +883,7 @@ header{
                 grid-template-columns: 100%;
                 grid-column-gap: 2em;
                 position: absolute;
-                top: -1100%;
+                top: -1110%;
                 left: 0;
                 width: max-content;
                 height: max-content;
@@ -1051,7 +1135,7 @@ header{
   }
 
   .bg-head{
-    @media screen and (min-width:$xl){
+    @media screen and (min-width:$lg){
       position: absolute;
       top: 0;
       right: 0;
@@ -1128,6 +1212,22 @@ main{
       }
 
       .list{
+        @media screen and (max-width:($md)-1px){
+          p{
+            cursor: pointer;
+          }
+          p:after{
+            content: '';
+            background: url(/img/icon/plus-circle.svg);
+            background-size: 15px 15px;
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            margin-left: 5px;
+          }
+        }
+
         p{
           @media screen and (max-width:($xl)-1px) {
             text-align: center;
@@ -1139,8 +1239,29 @@ main{
         }
 
         ul{
+          @media screen and (max-width:($md)-1px){
+            display: none;
+
+            &.show{
+              display: block;
+            }
+          }
+
           li{
             margin: .25em 0;
+            display: flex;
+            justify-content: center;
+
+            @media screen and (min-width:$xl){
+              justify-content: flex-start;
+            }
+
+            // ทำตัวขีดหน้า li
+            &:before{
+              content: attr(data-list);
+              margin-right: 3px;
+              color: $text-b;
+            }
 
             a{
               display: flex;
@@ -1154,6 +1275,12 @@ main{
                 width: 20px;
                 height: 20px;
                 margin-right: 10px;
+              }
+
+              @media (hover:hover){
+                &:hover{
+                  color: $blue;
+                }
               }
             }
           }

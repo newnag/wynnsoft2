@@ -114,7 +114,31 @@ function slide_port(){
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
-    }
+    },
+    loop:true
+  });
+}
+
+// สไลด์ทีม
+function slide_team(){
+  let swiper = new Swiper('.grid-team-slide', {
+    breakpoints:{
+      640:{
+        slidesPerView: 2,
+      },
+      1024:{
+        slidesPerView: 3,
+      },
+      1280:{
+        slidesPerView: 5,
+      }
+    },
+    autoplay:{
+      delay: 4000
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
   });
 }
 
@@ -147,3 +171,4 @@ slide_service()
 slide_all_package()
 select_package()
 slide_port()
+slide_team()
