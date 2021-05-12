@@ -43,11 +43,13 @@ function close_mobile_menu(){
 // เปิด sub เมนู
 function open_nav_submenu(that){
   // เช็ค Device Mobile
-  // if(/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || screen.width < 1280){
-    
-  // }
-  that.classList.toggle('active')
-  that.nextElementSibling.classList.toggle('show')
+  if(/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    that.classList.toggle('active')
+    that.nextElementSibling.classList.toggle('show')
+  }
+  else if(screen.width > 1023 && screen.width < 1280){
+    alert('ไม่แนะนำให้ทำการย่อขนาดหน้าจอในไซส์นี้ อาจจะทำให้การแสดงผลบางอย่างผิดพลาด')
+  }
 }
 // เปิดปิดเมนู other
 function open_other_menu(that){
