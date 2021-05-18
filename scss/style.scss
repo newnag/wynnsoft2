@@ -1157,7 +1157,7 @@ header{
 }
 
 main{
-  min-height: calc(100vh - 128px);
+  min-height: calc(100vh - 128px - 513px);
   margin-top: 70px;
 
   @media screen and (min-width:$lg){
@@ -1172,7 +1172,7 @@ footer{
 .nav-footer{
   height: max-content;
   width: 100%;
-  margin-top: 1em;
+  //margin-top: 1em;
   padding-top: 1em;
 
   @media screen and (min-width:$xl){
