@@ -1,0 +1,225 @@
+@import "variable";
+
+.article{
+  padding: 2em 0;
+
+  .grid-article{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 2em;
+    padding: 0 3em;
+
+    @media screen and (min-width:$sm){
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap: 2em;
+      padding: 0 4em;
+    }
+    @media screen and (min-width:$lg){
+      grid-template-columns: repeat(3,1fr);
+    }
+    @media screen and (min-width:$xl){
+      grid-template-columns: repeat(5,18.1%);
+      padding: unset;
+    }
+
+    .box{
+      border: 1px solid $gray;
+      border-radius: 5px;
+
+      figure{
+        img{
+          height: 150px;
+          width: 100%;
+        }
+      }
+
+      .detail{
+        padding: 3px 5px;
+        background: url(/img/BG-L.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .title{
+          h3{
+            font-size: 1.2em;
+            height: 3.2em;
+            overflow: hidden;
+            word-wrap: normal;
+          }
+        }
+
+        .date-author{
+          .date,.author{
+            color: $blue;
+            font-size: .8em;
+          }
+          .date{
+            border-right: 1px solid $blue;
+            padding-right: .5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.article-detail{
+  .head-content{
+    background: url(/img/Group-605.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .title-content{
+      h1,.desc{
+        color: $text-w;
+      }
+    }
+
+    .cover{
+      height: 379px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      img{
+        max-width: 100%;
+        max-height: 370px;
+
+        @media screen and (min-width:$lg) {
+          max-width: 768px;
+        }
+      }
+    }
+
+    .date-share{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1em;
+
+      @media screen and (min-width:$lg){
+        width: 768px;
+      }
+      @media screen and (min-width:$xl){
+        padding: unset;
+      }
+
+      .date-auther{
+        width: 180px;
+        overflow: hidden;
+        height: 1.4em;
+
+        span{
+          font-size: .8em;
+          color: $blue;
+
+          &:nth-child(1){
+            border-right: 1px solid $blue;
+            padding-right: 5px;
+          }
+        }
+        .auther{
+          word-break: break-all;
+        }
+      }
+
+      .share{
+        span{
+          font-size: .8em;
+          color: $blue;
+          margin: 0 .25em;
+        }
+      }
+    }
+  }
+  
+  .content-ck{
+    margin: 2em 0;
+    border-bottom: 2px solid $gray;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    @media screen and (min-width:$lg){
+      padding-left: unset;
+      padding-right: unset;
+    }
+
+    p{
+      word-break: normal;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .other-article{
+    .grid-content{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-row-gap: 2em;
+      padding: 0 3em;
+  
+      @media screen and (min-width:$sm){
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 2em;
+        padding: 0 4em;
+      }
+      @media screen and (min-width:$lg){
+        grid-template-columns: repeat(3,1fr);
+      }
+      @media screen and (min-width:$xl){
+        grid-template-columns: repeat(5,18.1%);
+        padding: unset;
+      }
+  
+      .box{
+        border: 1px solid $gray;
+        border-radius: 5px;
+  
+        figure{
+          img{
+            height: 150px;
+            width: 100%;
+          }
+        }
+  
+        .detail{
+          padding: 3px 5px;
+          background: url(/img/BG-L.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+  
+          .title{
+            h3{
+              font-size: 1.2em;
+              height: 3.2em;
+              overflow: hidden;
+              word-wrap: normal;
+            }
+          }
+  
+          .date-author{
+            .date,.author{
+              color: $blue;
+              font-size: .8em;
+            }
+            .date{
+              border-right: 1px solid $blue;
+              padding-right: .5em;
+            }
+          }
+        }
+      }
+    }
+
+    .button-more{
+      margin: 2em 0;
+      text-align: center;
+    }
+  }
+}

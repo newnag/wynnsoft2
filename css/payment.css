@@ -1,0 +1,267 @@
+.bg-grad-blue {
+  background: -webkit-gradient(linear, left top, left bottom, from(#3AACFF), to(#001981));
+  background: linear-gradient(#3AACFF, #001981);
+}
+
+.payment {
+  padding: 2em 0;
+}
+
+.payment.bg-gray {
+  background: #f0f4f7;
+}
+
+@media screen and (min-width: 768px) {
+  .payment {
+    padding: 3em 0;
+  }
+}
+
+.payment .payment-box {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 3em;
+  padding: 0 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .payment .payment-box {
+    width: 600px;
+    padding: unset;
+    margin-top: 6em;
+  }
+}
+
+.payment .payment-box .box {
+  background: #fff;
+  border-radius: 20px;
+  position: relative;
+}
+
+.payment .payment-box .box .head-box {
+  border-bottom: 1px solid #efefef;
+  padding: 1em 2em;
+}
+
+.payment .payment-box .box .head-box p {
+  color: #2792E0;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .payment .payment-box .box .head-box p {
+    font-size: 1.8em;
+  }
+}
+
+.payment .payment-box .box .list-package {
+  padding: 1em 0;
+}
+
+.payment .payment-box .box .list-package .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em 2em;
+  border-bottom: 1px solid #efefef;
+}
+
+.payment .payment-box .box .list-package .list .plan .name-plan {
+  font-weight: 500;
+  font-size: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .payment .payment-box .box .list-package .list .plan .name-plan {
+    font-size: 1.2em;
+  }
+}
+
+.payment .payment-box .box .list-package .list .plan .ps {
+  font-weight: 500;
+  font-size: 1em;
+  color: #BBBBBB;
+}
+
+@media screen and (min-width: 768px) {
+  .payment .payment-box .box .list-package .list .plan .ps {
+    font-size: 1.2em;
+  }
+}
+
+.payment .payment-box .box .list-package .list .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.payment .payment-box .box .list-package .list .price p {
+  color: #BBBBBB;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .payment .payment-box .box .list-package .list .price p {
+    font-size: 1.2em;
+  }
+}
+
+.payment .payment-box .box .total {
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #efefef;
+}
+
+.payment .payment-box .box .total p, .payment .payment-box .box .total .price {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.payment .payment-box .box .button-pay {
+  padding: 3em 0;
+  text-align: center;
+}
+
+.payment .payment-box .box .button-pay button {
+  width: 180px;
+}
+
+.payment .payment-box .box > .ps {
+  width: 100%;
+  padding: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .payment .payment-box .box > .ps {
+    width: 60%;
+    padding: 2em;
+  }
+}
+
+.payment .payment-box .box .qr {
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.payment .payment-box .box .qr img {
+  border: 1px solid #BBBBBB;
+  border-radius: 5px;
+  max-height: 280px;
+  max-width: 200px;
+}
+
+.payment .payment-box .box .ps-qr {
+  width: 100%;
+  padding: 2em;
+}
+
+.payment .payment-box .box .button-download {
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.payment .payment-box .box .button-download .close {
+  width: 100px;
+  background: #d7eeff;
+  border: unset;
+  color: #2792E0;
+}
+
+.payment .payment-box .box > .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 1.4em;
+  color: #2792E0;
+}
+
+@media screen and (min-width: 768px) {
+  .payment .payment-box .box > .close {
+    top: 20px;
+  }
+}
+
+.payment .howto .box {
+  margin-bottom: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-column-gap: 2%;
+  background: #d7eeff;
+  border-radius: 10px;
+  padding: 2em;
+  grid-row-gap: 1em;
+}
+
+@media screen and (min-width: 1024px) {
+  .payment .howto .box {
+    -ms-grid-columns: 60% 38%;
+        grid-template-columns: 60% 38%;
+  }
+}
+
+.payment .howto .box .left .head-content {
+  color: #2792E0;
+  margin-bottom: 2em;
+}
+
+.payment .howto .box .left .head-content h2 {
+  font-size: 1.8em;
+}
+
+@media screen and (min-width: 640px) {
+  .payment .howto .box .left .head-content h2 {
+    font-size: 2.4em;
+  }
+}
+
+.payment .howto .box .left p {
+  text-indent: 5%;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 2;
+}
+
+@media screen and (min-width: 640px) {
+  .payment .howto .box .left p {
+    font-size: 1.2em;
+  }
+}
+
+.payment .howto .box .right figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=payment.css.map */

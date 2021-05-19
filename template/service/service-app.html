@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wynnsoft 2 Demo</title>
+
+  <!-- plugin -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- style -->
+  <link rel="stylesheet" href="/css/style.min.css?v=0.1.15">
+  <link rel="stylesheet" href="/css/service.min.css">
+</head>
+<body>
+  <!-- ส่วนหัว -->
+  <header>
+    <div class="header container mx-auto flex">
+      <div class="logo p-2 xl:p-0 xl:m-auto"><a href="/template/home.html"><img class="w-auto h-full" src="/img/logo/logo1.png" alt=""></a></div>
+      <nav class="relative">
+        <div class="menu-nav">
+          <ul class="top-menu">
+            <!-- li class = "nav-menu-active" เอาไว้สำหรับเมนูที่โดน active -->
+            <li class="nav-menu-active"><a href="">หน้าแรก</a></li>
+            <li>
+              <a href="#" onclick="open_nav_submenu(this)">บริการ</a>
+              <ul class="submenu">
+                <div class="list-menu">
+                  <p>บริการด้านเว็บไซต์</p>
+                  <li data-list="-"><a href="">เว็บไซต์สำเร็จรูป</a></li>
+                  <li data-list="-"><a href="">รับทำและออกแบบเว็บไซต์</a></li>
+                  <li data-list="-"><a href="">รับทำ Web Application</a></li>
+                  <li data-list="-"><a href="">รับทำ Mobile Application</a></li>
+                  <li data-list="-"><a href="">รับลงข้อมูล Update Website</a></li>
+                  <li data-list="-"><a href="">Admin ดูแลเพจและเว็บไซต์</a></li>
+                </div>
+
+                <div class="list-menu">
+                  <p>รับสร้างและลงสินค้า</p>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า Shopee</a></li>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า Lazada</a></li>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า Lnwshop</a></li>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า Alibaba</a></li>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า Amazon</a></li>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า eBay</a></li>
+                </div>
+
+                <div class="list-menu">
+                  <p>รับทำการตลาดออนไลน์</p>
+                  <li data-list="-"><a href="">รับทำเว็บไซต์ให้ติดการค้นหา (SEO)</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Facebook</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Instagram</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Tiktok</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Youtube</a></li>
+                  <li data-list="-"><a href="">รับสร้างช่อง Youtube</a></li>
+                  <li data-list="-"><a href="">รับทำ Google Adwords</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Timeline</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Google Adwords</a></li>
+                  <li data-list="-"><a href="">รับทำ Google Adsends</a></li>
+                </div>
+
+                <div class="list-menu">
+                  <p>GraphicDesign & VideoEditor</p>
+                  <li data-list="-"><a href="">รับทำ Logo</a></li>
+                  <li data-list="-"><a href="">รับทำ Banner โฆษณา</a></li>
+                  <li data-list="-"><a href="">Label & Packaging</a></li>
+                  <li data-list="-"><a href="">สื่อสิ่งพิมพ์ & นามบัตร</a></li>
+                  <li data-list="-"><a href="">InfoGrapic</a></li>
+                  <li data-list="-"><a href="">รับออกแบบอัตลักษณ์องค์กร</a></li>
+                  <li data-list="-"><a href="">DieCut & Photoshop</a></li>
+                  <li data-list="-"><a href="">PortFolio & Resume</a></li>
+                </div>
+              </ul>
+            </li>
+            <li><a href="">ผลงานของเรา</a></li>
+            <li><a href="">การชำระเงิน</a></li>
+            <li><a href="">ความรู้บทความ</a></li>
+            <li><a href="">กิจกรรม</a></li>
+            <li><a href="">ร่วมงานกับเรา</a></li>
+            <li><a href="">ติดต่อเรา</a></li>
+  
+            <div class="assismenu">
+              <div class="signin flex items-center">
+                <a href="" class="flex">
+                  <img class="icon" src="/img/icon/user-solid.svg" alt="">
+                  <span>Sign In</span>
+                </a>
+              </div>
+              <div class="lang flex items-center relative" onclick="open_lang(this)">
+                <img class="icon" src="/img/icon/translate.svg" alt="">
+                <span>En</span>
+                <ul class="list-lang absolute xl:hidden">
+                  <li><a href="">TH</a></li>
+                  <li><a href="">EN</a></li>
+                  <li><a href="">KH</a></li>
+                  <li><a href="">CH</a></li>
+                </ul>
+              </div>
+              <div class="contact" onclick="open_contact(this)">
+                <div class="button-contact">
+                  <div class="phone"><img src="/img/icon/mobile-alt-solid.svg" alt=""></div>
+                  <div class="border"></div>
+                  <div class="line"><img src="/img/icon/line.svg" alt=""></div>
+                </div>
+    
+                <div class="text-contact">
+                  <div class="phone">
+                    <span>โทรศัพท์</span>
+                    <span>043-002-300</span>
+                  </div>
+                  <div class="phone">
+                    <span>เบอร์โทรฟรี</span>
+                    <span>1800-010-169</span>
+                  </div>
+                  <div class="phone">
+                    <span>มือถือ</span>
+                    <span>062-909-1110</span>
+                  </div>
+                  <div class="phone">
+                    <span>LineID</span>
+                    <span>@wynnsoft-solution</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- แสดงเฉพาะ pc -->
+            <li class="other hidden xl:block" onclick="open_other_menu(this)">
+              <div class="hamburger"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+              <ul>
+                <li><a href="">เงื่อนไขการใช้บริการ</a></li>
+                <li><a href="">นโยบายความเป็นส่วนตัว</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="bottom-menu">
+            <li><a href="">Web App By Wynnsoft</a></li>
+            <li>
+              <a href="#" onclick="open_nav_submenu(this)">เทมเพลตเว็บไซต์ & Packaging</a>
+              <!-- หากมี list-menu มากกว่า 2 ให้เพิ่ม class: column2 เข้าไปที่ submenu -->
+              <ul class="submenu column2">
+                <div class="list-menu grid xl:grid-cols-2">
+                  <p onclick="open_li(this)">เทมเพลตเว็บไซต์</p>
+                  <li data-list="-"><a href="">ร้านค้าออนไลน์</a></li>
+                  <li data-list="-"><a href="">โรงแรม รีสอร์ท</a></li>
+                  <li data-list="-"><a href="">แฟชั่น เสื้อผ้า</a></li>
+                  <li data-list="-"><a href="">เทคโนโลยี</a></li>
+                  <li data-list="-"><a href="">คอฟฟี่ เบเกอรี่</a></li>
+                  <li data-list="-"><a href="">ความงาม</a></li>
+                  <li data-list="-"><a href="">ร้านอาหาร ภัตตาคาร</a></li>
+                  <li data-list="-"><a href="">อสังหาริมทรัพย์ บ้าน ที่ดิน คอนโด</a></li>
+                  <li data-list="-"><a href="">หน่วยงานราชการ</a></li>
+                  <li data-list="-"><a href="">โรงเรียน การศึกษา กวดวิชา</a></li>
+                  <li data-list="-"><a href="">เด็ก</a></li>
+                  <li data-list="-"><a href="">สวนสนุก กิจกรรม</a></li>
+                  <li data-list="-"><a href="">การท่องเที่ยว</a></li>
+                  <li data-list="-"><a href="">รถยนต์ & มอเตอร์ไซค์</a></li>
+                  <li data-list="-"><a href="">บริการต่างๆ</a></li>
+                  <li data-list="-"><a href="">บ้าน ของตกแต่ง ดอกไม้</a></li>
+                  <li data-list="-"><a href="">บริการ</a></li>
+                  <li data-list="-"><a href="">อื่นๆ</a></li>
+                </div>
+
+                <div class="list-menu flex flex-col">
+                  <p onclick="open_li(this)">Label & Packing</p>
+                  <li data-list="-"><a href="">ประเภทขวด</a></li>
+                  <li data-list="-"><a href="">ประเภทขวดแก้ว</a></li>
+                  <li data-list="-"><a href="">ประเภทขวดพลาสติก</a></li>
+                  <li data-list="-"><a href="">ประเภทกระป๋อง</a></li>
+                  <li data-list="-"><a href="">ประเภทกล่อง</a></li>
+                  <li data-list="-"><a href="">ป้ายแผ่นผนึก (Label)</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="#" onclick="open_nav_submenu(this)">บริการด้านเว็บไซต์</a>
+              <ul class="submenu">
+                <div class="list-menu">
+                  <p>บริการด้านเว็บไซต์</p>
+                  <li data-list="-"><a href="">เว็บไซต์สำเร็จรูป</a></li>
+                  <li data-list="-"><a href="">รับทำและออกแบบเว็บไซต์</a></li>
+                  <li data-list="-"><a href="">รับทำ Web Application</a></li>
+                  <li data-list="-"><a href="">รับทำ Mobile Application</a></li>
+                  <li data-list="-"><a href="">รับลงข้อมูล Update Website</a></li>
+                  <li data-list="-"><a href="">Admin ดูแลเพจและเว็บไซต์</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="#" onclick="open_nav_submenu(this)">รับสร้างและลงสินค้า</a>
+              <ul class="submenu">
+                <div class="list-menu">
+                  <p>รับสร้างและลงสินค้า</p>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า Shopee</a></li>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า Lazada</a></li>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า Lnwshop</a></li>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า Alibaba</a></li>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า Amazon</a></li>
+                  <li data-list="-"><a href="">รับสร้างและลงสินค้า eBay</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="#" onclick="open_nav_submenu(this)">รับทำการตลาดออนไลน์</a>
+              <ul class="submenu">
+                <div class="list-menu">
+                  <p>รับทำการตลาดออนไลน์</p>
+                  <li data-list="-"><a href="">รับทำเว็บไซต์ให้ติดการค้นหา (SEO)</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Facebook</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Instagram</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Tiktok</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Youtube</a></li>
+                  <li data-list="-"><a href="">รับสร้างช่อง Youtube</a></li>
+                  <li data-list="-"><a href="">รับทำ Google Adwords</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Timeline</a></li>
+                  <li data-list="-"><a href="">รับทำโฆษณา Google Adwords</a></li>
+                  <li data-list="-"><a href="">รับทำ Google Adsends</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="#" onclick="open_nav_submenu(this)">GraphicDesign & VideoEditor</a>
+              <ul class="submenu">
+                <div class="list-menu">
+                  <p>GraphicDesign & VideoEditor</p>
+                  <li data-list="-"><a href="">รับทำ Logo</a></li>
+                  <li data-list="-"><a href="">รับทำ Banner โฆษณา</a></li>
+                  <li data-list="-"><a href="">Label & Packaging</a></li>
+                  <li data-list="-"><a href="">สื่อสิ่งพิมพ์ & นามบัตร</a></li>
+                  <li data-list="-"><a href="">InfoGrapic</a></li>
+                  <li data-list="-"><a href="">รับออกแบบอัตลักษณ์องค์กร</a></li>
+                  <li data-list="-"><a href="">DieCut & Photoshop</a></li>
+                  <li data-list="-"><a href="">PortFolio & Resume</a></li>
+                </div>
+              </ul>
+            </li>
+          </ul>
+          <div class="mobile-close"><figure onclick="close_mobile_menu()"><img src="/img/icon/arrow-point-to-right.svg" alt=""></figure></div>
+        </div>
+        <div class="mobile-assismenu absolute flex right-12 md:right-40 lg:hidden">
+          <div class="signin flex items-center">
+            <a href="" class="flex">
+              <img class="icon" src="/img/icon/user-solid.svg" alt="">
+              <span>Sign In</span>
+            </a>
+          </div>
+          <div class="lang flex items-center relative" onclick="open_assis_lang(this)">
+            <img class="icon" src="/img/icon/translate.svg" alt="">
+            <span>En</span>
+            <ul class="list-lang absolute xl:hidden">
+              <li><a href="">TH</a></li>
+              <li><a href="">EN</a></li>
+              <li><a href="">KH</a></li>
+              <li><a href="">CH</a></li>
+            </ul>
+          </div>
+          <div class="contact" onclick="open_assis_contact(this)">
+            <div class="button-contact">
+              <div class="phone"><img src="/img/icon/mobile-alt-solid.svg" alt=""></div>
+              <div class="border"></div>
+              <div class="line"><img src="/img/icon/line.svg" alt=""></div>
+            </div>
+
+            <div class="text-contact">
+              <div class="phone">
+                <span>โทรศัพท์</span>
+                <span>043-002-300</span>
+              </div>
+              <div class="phone">
+                <span>เบอร์โทรฟรี</span>
+                <span>1800-010-169</span>
+              </div>
+              <div class="phone">
+                <span>มือถือ</span>
+                <span>062-909-1110</span>
+              </div>
+              <div class="phone">
+                <span>LineID</span>
+                <span>@wynnsoft-solution</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu absolute lg:hidden" onclick="open_mobile_menu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </div>
+    <div class="bg-head">
+      <div class="top"></div>
+      <div class="bottom"></div>
+    </div>
+  </header>
+
+  <!-- ส่วนเนื้อหา -->
+  <main>
+    <div class="service">
+      <div class="title-page">
+        <h1>บริการด้าน ทำเว็บไซต์หลายภาษา</h1>
+        <p class="desc">สร้างเว็บไซต์ หลายภาษา ที่คุณต้องการเพื่อการเข้าถึงของผู้คนมากมาย</p>
+      </div>
+
+      <!-- ไอค่อนบริการ -->
+      <div class="grid-service three container mx-auto">
+        <div class="item">
+          <figure><img src="/img/icon/cash-register-solid.svg" alt=""></figure>
+          <p>Elegant Design</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Aut fuga, quos a qui, rem voluptatem, aperiam molestias dolorem tempora excepturi tenetur dolores unde error. 
+            Aliquid facilis quia omnis earum beatae?
+          </p>
+        </div>
+
+        <div class="item">
+          <figure><img src="/img/icon/language-solid.svg" alt=""></figure>
+          <p>Elegant Design</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Aut fuga, quos a qui, rem voluptatem, aperiam molestias dolorem tempora excepturi tenetur dolores unde error. 
+            Aliquid facilis quia omnis earum beatae?
+          </p>
+        </div>
+
+        <div class="item">
+          <figure><img src="/img/icon/laptop-code-solid.svg" alt=""></figure>
+          <p>Elegant Design</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Aut fuga, quos a qui, rem voluptatem, aperiam molestias dolorem tempora excepturi tenetur dolores unde error. 
+            Aliquid facilis quia omnis earum beatae?
+          </p>
+        </div>
+      </div>
+
+      <!-- คำอธิบายบริการ -->
+      <div class="desc-service">
+        <div class="txt container mx-auto">
+          <h2>เว็บไซต์สำเร็จรูป คืออะไร</h2>
+          <p>
+            เว็บไซต์ที่ถูกสร้างชึ้นมาเพื่อตอบโจทย์ต่อทุกธุรกิจของผู้ประกอบการ หรือเว็บไซต์แบบอัตโนมัติ สามารถออกแบบเว็บไซต์ได้เอง ใช้งานง่าย สะดวก และรวดเร็ว ข้อสำคัญก็คือ ผู้ประกอบการไม่จำเป็นต้องมีความรู้พื้นฐานด้านการเขียนโปรแกรม ก็สามารถมีเว็บไซต์ที่สวยหรูได้ ซึ่งทางทีมงานเรา wynnsoft solution มีบริการของเว็บไซต์สำเร็จรูปที่มีการออกแบบให้เลือกอย่างมากมาย อีกทั้งยังจะช่วยให้คุณได้เพิ่มโอกาสในเรื่องของฐานลูกค้าและยอดขายที่เพิ่มมากขึ้นอีกด้วย
+          </p>
+        </div>
+        
+        <div class="bg"><img src="/img/Group-604.png" alt=""></div>
+      </div>
+
+      <!-- ติดต่อเรา -->
+      <div class="contact p-8 bg-grad-blue">
+        <div class="title-content blue">
+          <h2>ให้เราติดต่อหาคุณ</h2>
+          <p>lorem loremlorem loremloremlorem loremloremlorem</p>
+        </div>
+
+        <form class="form-contact container mx-auto" action="">
+          <div class="input-box">
+            <label for="">ชื่อ</label>
+            <input type="text" class="form-component input" placeholder="ชื่อ">
+          </div>
+
+          <div class="input-box">
+            <label for="">อีเมล์</label>
+            <input type="text" class="form-component input" placeholder="อีเมล์">
+          </div>
+
+          <div class="input-box">
+            <label for="">เบอร์มือถือ</label>
+            <input type="text" class="form-component input" placeholder="เบอร์โทร">
+          </div>
+
+          <div class="input-box">
+            <label for="">บริการที่สนใจ</label>
+            <select name="" id="" class="form-component select">
+              <option value="">เลือกบริการ</option>
+              <option value="">เว็บ</option>
+              <option value="">แอพ</option>
+              <option value="">โลโก้</option>
+            </select>
+          </div>
+
+          <div class="input-box full">
+            <label for="">ข้อความ</label>
+            <textarea name="" id="" cols="30" rows="4" class="form-component textarea"></textarea>
+          </div>
+
+          <div class="button-submit"><button class="form-component button btn-warning">Send</button></div>
+        </form>
+      </div>
+
+      <!-- ผลงานอื่นๆ -->
+      <div class="other container mx-auto">
+        <div class="title">
+          <h2>ตัวอย่างเว็บไซต์หลายภาษา จาก wynnsoft-solution</h2>
+          <p>เราใส่ใจทุกผลงานที่ออกแบบ ให้ถูกใจตามที่ลูกค้าต้องการ</p>
+        </div>
+
+        <div class="grid-portfolio-app container mx-auto">
+          <div class="box">
+            <a href="">
+              <figure>
+                <img src="/img/Group-180.png" alt="">
+                <p>krai.com</p>
+              </figure>
+            </a>
+          </div>
+  
+          <div class="box">
+            <a href="">
+              <figure>
+                <img src="/img/Group-180.png" alt="">
+                <p>krai.com</p>
+                <div class="free">Free</div>
+              </figure>
+            </a>
+          </div>
+  
+          <div class="box">
+            <a href="">
+              <figure>
+                <img src="/img/Group-180.png" alt="">
+                <p>krai.com</p>
+              </figure>
+            </a>
+          </div>
+
+          <div class="box">
+            <a href="">
+              <figure>
+                <img src="/img/Group-180.png" alt="">
+                <p>krai.com</p>
+              </figure>
+            </a>
+          </div>
+  
+          <div class="box">
+            <a href="">
+              <figure>
+                <img src="/img/Group-180.png" alt="">
+                <p>krai.com</p>
+                <div class="free">Free</div>
+              </figure>
+            </a>
+          </div>
+  
+          <div class="box">
+            <a href="">
+              <figure>
+                <img src="/img/Group-180.png" alt="">
+                <p>krai.com</p>
+              </figure>
+            </a>
+          </div>
+        </div>
+
+        <div class="button"><button class="form-component button btn-primary">ดูผลงานออกแบบเว็บไซต์ทั้งหมด</button></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="nav-footer container mx-auto">
+      <div class="grid-menu-footer grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-28">
+        <div class="box grid gap-y-2">
+          <figure><img src="/img/logo/logo1.png" alt=""></figure>
+          <div class="address">
+            Wynnsoft Solution, Ltd. 120/34-35 หมู่ 24
+            ตำบลศิล อำเภอเมืองขอนแก่น จังหวัดขอนแก่น
+            40000
+          </div>
+          <div class="address">
+            Wynnsoft Solution, Ltd. 120/34-35 หมู่ 24
+            ตำบลศิล อำเภอเมืองขอนแก่น จังหวัดขอนแก่น
+            40000
+          </div>
+        </div>
+
+        <div class="box grid gap-y-5">
+          <div class="list">
+            <p onclick="mobile_open_menu_footer(this)">บริการด้านเว็บไซต์</p>
+            <ul>
+              <li data-list="-"><a href="">เว็บไซต์สำเร็จรูป</a></li>
+              <li data-list="-"><a href="">เว็บไซต์หลายภาษา</a></li>
+              <li data-list="-"><a href="">รับทำและออกแบบเว็บไซต์</a></li>
+              <li data-list="-"><a href="">รับทำ Web Application</a></li>
+              <li data-list="-"><a href="">รับทำ Mobile Application</a></li>
+              <li data-list="-"><a href="">รับลงข้อมูล Update Website</a></li>
+              <li data-list="-"><a href="">Admin ดูแลเพจและเว็บไซต์</a></li>
+            </ul>
+          </div>
+
+          <div class="list">
+            <p onclick="mobile_open_menu_footer(this)">บริการด้านการตลาดออนไลน์</p>
+            <ul>
+              <li data-list="-"><a href="">ทำเว็บไซต์ให้ติดการค้นหา SEO</a></li>
+              <li data-list="-"><a href="">รับทำโฆษณา Facebook</a></li>
+              <li data-list="-"><a href="">รับทำโฆษณา Tiktok</a></li>
+              <li data-list="-"><a href="">รับทำโฆษณา Youtube</a></li>
+              <li data-list="-"><a href="">รับทำ google adword</a></li>
+              <li data-list="-"><a href="">รับทำโฆษณา Timeline</a></li>
+              <li data-list="-"><a href="">รับทำ google adsends</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="box grid gap-y-5">
+          <div class="list">
+            <p onclick="mobile_open_menu_footer(this)">Graphic Design & Video Editor</p>
+            <ul>
+              <li data-list="-"><a href="">รับทำ Logo</a></li>
+              <li data-list="-"><a href="">รับทำ Banner</a></li>
+              <li data-list="-"><a href="">label & packaging</a></li>
+              <li data-list="-"><a href="">สื่อสิ่งพิมพ์ & นามบัตร</a></li>
+              <li data-list="-"><a href="">InfoGrapic</a></li>
+              <li data-list="-"><a href="">รับออกแบบอัตลักษณ์องค์กร</a></li>
+              <li data-list="-"><a href="">diecut & photoshop</a></li>
+              <li data-list="-"><a href="">protfolio & resume</a></li>
+              <li data-list="-"><a href="">ใบปลิวแผ่นพับ</a></li>
+              <li data-list="-"><a href="">วาดแผนที่</a></li>
+              <li data-list="-"><a href="">รับทำและออกแบบสติกเกอร์ไลน์</a></li>
+              <li data-list="-"><a href="">รับถ่ายตัดต่อ video</a></li>
+              <li data-list="-"><a href="">รับทำ video present</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="box grid gap-y-5">
+          <div class="list">
+            <p onclick="mobile_open_menu_footer(this)">รับสร้างและลงสินค้า</p>
+            <ul>
+              <li data-list="-"><a href="">รับสร้างและลงสินค้า Shopee</a></li>
+              <li data-list="-"><a href="">รับสร้างและลงสินค้า Lazada</a></li>
+              <li data-list="-"><a href="">รับทำและออกแบบเว็บไซต์</a></li>
+              <li data-list="-"><a href="">รับสร้างและลงสินค้า Lnwshop</a></li>
+              <li data-list="-"><a href="">รับสร้างและลงสินค้า Alibaba</a></li>
+              <li data-list="-"><a href="">รับสร้างและลงสินค้า Amazon</a></li>
+              <li data-list="-"><a href="">รับสร้างและลงสินค้า eBay</a></li>
+            </ul>
+          </div>
+
+          <div class="list">
+            <p onclick="mobile_open_menu_footer(this)">ติดตามเราได้ที่</p>
+            <ul>
+              <li data-list="-"><a href=""><img src="/img/icon/youtube-brands.svg" alt=""> youtube</a></li>
+              <li data-list="-"><a href=""><img src="/img/icon/sosial-03.svg" alt=""> facebook</a></li>
+              <li data-list="-"><a href=""><img src="/img/icon/sosial-04.svg" alt=""> twitter</a></li>
+              <li data-list="-"><a href=""><img src="/img/icon/sosial-02.svg" alt=""> instagram</a></li>
+              <li data-list="-"><a href=""><img src="/img/icon/line.svg" alt=""> line</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2022 <a href="https://www.wynnsoft-solution.com/">wynnsoft-solution</a></p>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/37e3c13129.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/main.js?v=0.1.6"></script>
+  <script src="/js/service.js"></script>
+</body>
+</html>
