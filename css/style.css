@@ -249,6 +249,14 @@ li {
   cursor: default;
 }
 
+.card {
+  border: unset;
+  border-radius: 20px;
+  background: #fff;
+  -webkit-box-shadow: 0 3px 5px #505050;
+          box-shadow: 0 3px 5px #505050;
+}
+
 header {
   position: fixed;
   top: 0;
