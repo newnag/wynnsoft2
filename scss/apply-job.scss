@@ -1,0 +1,770 @@
+@import "variable";
+
+.job{
+  padding: 2em 0;
+  padding-bottom: 6em;
+
+  @media screen and (min-width:$xl){
+    position: relative;
+    padding-bottom: 8em;
+
+    &:before{
+      content: url(/img/BG-L.png);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &:after{
+      content: url(/img/BG-R.png);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .content{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width:$lg){
+      flex-direction: row;
+      padding: 0 6em;
+    }
+
+    figure{
+      display: flex;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .text{
+      padding: 1em;
+
+      @media screen and (min-width:$lg){
+        width: 60%;
+        padding-left: 1em;
+      }
+      @media screen and (min-width:$xl){
+        padding-left: 3em;
+        padding-right: 6em;
+      }
+
+      h2{
+        font-size: 2em;
+        margin-bottom: 1em;
+      }
+      p{
+        text-indent: 20px;
+        margin-bottom: 1em;
+      }
+
+      .contact{
+        display: flex;
+
+        span{
+          margin-right: 10px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .content-below{
+    padding: 2em 0;
+
+    @media screen and (min-width:$lg){
+      padding: 2em 6em;
+    }
+
+    p{
+      text-indent: 20px;
+    }
+  }
+}
+
+.job-list{
+  background: linear-gradient($darkblue,$blue);
+
+  .box-all{
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 1em;
+
+    @media screen and (min-width:$md){
+      grid-template-columns: repeat(3,1fr);
+      grid-column-gap: 1em;
+    }
+    @media screen and (min-width:$xl){
+      padding: 3em 1em;
+    }
+
+    .head-content{
+      text-align: center;
+
+      @media screen and (min-width:$md){
+        grid-column: 1/4;
+      }
+      @media screen and (min-width:$xl){
+        text-align: left;
+      }
+
+      h2{
+        color: $text-w;
+        font-size: 2em;
+      }
+    }
+
+    .list{
+      border-top: 3px solid $white;
+
+      @media screen and (min-width:$lg){
+        border-top: unset;
+        border-left: 3px solid $white;
+        padding-left: 1em;
+      }
+
+      .name-sector{
+        color: $yellow;
+        margin-bottom: 1em;
+
+        p{
+          &:first-child{
+            font-size: 1.4em;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+          }
+          &:last-child{
+            font-size: .8em;
+          }
+        }
+      }
+
+      ul{
+        li{
+          color: $text-w;
+        }
+      }
+    }
+  }
+}
+
+.job-detail{
+  .head-job{
+    position: relative;
+    background: linear-gradient($blue,$darkblue);
+
+    @media screen and (min-width:$lg){
+      background: unset;
+    }
+
+    .logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em 0;
+
+      img{
+        width: 100px;
+        height: 100px;
+        background: $white;
+
+        @media screen and (min-width:$lg){
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+
+    .position{
+      text-align: center;
+      margin: 1em 0;
+
+      h1{
+        font-size: 2em;
+        color: $yellow;
+      }
+    }
+
+    .address{
+      text-align: center;
+      margin: 1em 0;
+
+      span{
+        color: $text-w;
+      }
+    }
+
+    .social{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a{
+        margin: 0 5px;
+      }
+    }
+
+    .button-apply{
+      text-align: center;
+      margin: 1em 0;
+      padding-bottom: 1em;
+      
+    }
+
+    .bg{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      @media screen and (min-width:$lg){
+        display: block;
+      }
+
+      img{
+        height: 440px;
+        width: 100%;
+      }
+    }
+  }
+
+  .detail-zone{
+    padding: 0 1em;
+
+    @media screen and (min-width:$lg){
+      padding: 0 10em;
+    }
+
+    .detail{
+      margin: 2em 0;
+
+      @media screen and (min-width:$lg){
+        margin: 4em 0;
+      }
+
+      .head-content{
+        width: max-content;
+        margin: 0 auto;
+        
+        h2{
+          color: $blue;
+          font-size: 1.8em;
+          border-bottom: 1px solid $blue;
+        }
+      }
+
+      p{
+        margin: 1em 0;
+        word-break: normal;
+      }
+    }
+
+    .skill{
+      @media screen and (min-width:$lg){
+        margin: 4em 0;
+      }
+
+      .head-content{
+        width: max-content;
+        margin: 0 auto;
+        
+        h2{
+          color: $blue;
+          font-size: 1.8em;
+          border-bottom: 1px solid $blue;
+        }
+      }
+
+      .list{
+        margin: 2em 0;
+
+        p{
+          margin: 1em 0;
+        }
+  
+        ul{
+          margin: 1em 0;
+  
+          li{
+            &:before{
+              content: '*';
+              margin-right: 3px;
+            }
+          }
+        }
+      }
+      
+    }
+
+    .welfare{
+      @media screen and (min-width:$lg){
+        margin: 4em 0;
+      }
+
+      .head-content{
+        width: max-content;
+        margin: 0 auto;
+        
+        h2{
+          color: $blue;
+          font-size: 1.8em;
+          border-bottom: 1px solid $blue;
+        }
+        
+      }
+
+      p{
+        margin: 1em 0;
+        word-break: normal;
+      }
+    }
+
+    .more-detail{
+      .head-content{
+        width: max-content;
+        margin: 0 auto;
+        
+        h2{
+          color: $blue;
+          font-size: 1.8em;
+          border-bottom: 1px solid $blue;
+        }
+        
+      }
+
+      ul{
+        margin: 1em 0;
+
+        li{
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  .map{
+    margin: 2em 0;
+
+    iframe{
+      width: 100%!important;
+      height: 200px;
+    }
+  }
+}
+
+.job-form{
+  padding: 2em 0;
+
+  .timeline{
+    .swiper-wrapper{
+      .swiper-slide{
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &.active{
+          p{
+            color: $blue;
+          }
+          .circle{
+            background: $blue;
+          }
+        }
+
+        p{
+          width: 135px;
+          margin: 0 auto;
+          font-size: 1.2em;
+          font-weight: 500;
+          text-align: center;
+          word-break: break-word;
+          height: 55px;
+          overflow: hidden;
+          cursor: pointer;
+        }
+        .circle{
+          width: 30px;
+          height: 30px;
+          background: $black;
+          border-radius: 50%;
+          margin: 0 auto;
+          margin-top: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .line-circle{
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(154,154,154,1) 15%, rgba(223,223,223,1) 50%, rgba(154,154,154,1) 85%, rgba(255,255,255,1) 100%);
+      z-index: -1;
+    }
+  }
+
+  .step{
+    text-align: center;
+    margin: 1em 0;
+
+    span{
+      color: $blue;
+    }
+  }
+
+  .set-form{
+    margin-top: 2em;
+    padding: 0 1em;
+
+    @media screen and (min-width:$md){
+      padding: 0 2em;
+    }
+    @media screen and (min-width:$lg){
+      padding: 0 8em;
+    }
+    @media screen and (min-width:$xl){
+      padding: 0 18em;
+    }
+    @media screen and (min-width:$xxl){
+      padding: 0 20em;
+    }
+
+    .tem-form{
+      .head-form{
+        text-align: center;
+        margin: 1em 0;
+        h2{
+          font-size: 2em;
+        }
+      }
+
+      .card{
+        padding: 2em;
+        margin-bottom: 2em;
+
+        @media screen and (min-width:$lg){
+          padding: 2em 6em;
+        }
+        @media screen and (min-width:$xl){
+          padding: 2em 8em;
+        }
+        @media screen and (min-width:$xxl){
+          padding: 3em 12em;
+        }
+
+        .head-card{
+          font-weight: 400;
+        }
+
+        .group-box{
+          margin: 2em 0;
+
+          .row-grid{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-row-gap: 1em;
+            margin-bottom: 1em;
+
+            @media screen and (min-width:$md){
+              grid-template-columns: repeat(2,1fr);
+              grid-column-gap: 1em;
+
+              &.full{
+                grid-template-columns: 100%;
+              }
+              &.col1-3{
+                grid-template-columns: repeat(3,1fr);
+              }
+            }
+
+            .input-box{
+              .group-radio{
+                display: flex;
+                flex-wrap: wrap;
+
+                @media screen and (min-width:$md){
+                  margin-top: 5px;
+                }
+
+                .radio{
+                  margin-right: 1em;
+                }
+              }
+
+              input::-webkit-outer-spin-button,
+              input::-webkit-inner-spin-button{
+                -webkit-appearance: none;
+                margin: 0;
+              }
+              input[type="number"]{
+                -moz-appearance: textfield;
+              }
+            }
+          }
+
+          >.group-radio{
+            display: flex;
+            flex-wrap: wrap;
+
+            @media screen and (min-width:$md){
+              margin-top: 5px;
+            }
+
+            .radio{
+              margin-right: 1em;
+
+              input[type="radio"]{
+                border: 1px solid $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .form1{
+      .box-upload{
+        margin: 2em 0;
+        background: linear-gradient($blue,$darkblue);
+        padding: 2em;
+        border-radius: 20px;
+
+        @media screen and (min-width:$md){
+          display: flex;
+        }
+
+        .picture{
+          margin-bottom: 1em;
+          border-bottom: 1px solid $white;
+          padding-bottom: 1em;
+
+          @media screen and (min-width:$md){
+            width: 50%;
+            border-bottom: unset;
+            border-right: 1px solid $white;
+            padding-bottom: 0;
+            padding-right: 1em;
+          }
+
+          p{
+            color: $text-w;
+            text-align: center;
+
+            @media screen and (min-width:$md){
+              width: 70%;
+              margin: 0 auto;
+            }
+          }
+          .preview{
+            display: flex;
+            justify-content: center;
+            margin: 1em 0;
+
+            img{
+              width: 80px;
+              height: 100px;
+            }
+          }
+          .button{
+            text-align: center;
+            margin-top: 1em;
+          }
+        }
+        .portfolio{
+          @media screen and (min-width:$md){
+            width: 50%;
+            padding-left: 1em;
+          }
+
+          p{
+            color: $text-w;
+            text-align: center;
+
+            @media screen and (min-width:$md){
+              width: 70%;
+              margin: 0 auto;
+            }
+          }
+          .preview{
+            display: flex;
+            justify-content: center;
+            margin: 1em 0;
+
+            img{
+              width: 80px;
+              height: 100px;
+            }
+          }
+          .button{
+            text-align: center;
+            margin-top: 1em;
+          }
+        }
+      }
+
+      .salary{
+        border-radius: 20px;
+        padding: 1em;
+
+        @media screen and (min-width:$md){
+          padding: 2em 4em;
+        }
+        @media screen and (min-width:$lg){
+          padding: 3em 6em;
+        }
+        @media screen and (min-width:$xl){
+          padding: 2em 4em;
+        }
+
+        .input-box{
+          label{
+            color: $text-w;
+          }
+        }
+      }
+    }
+
+    .form2{
+      .box-edu{
+        border-bottom: 1px dashed $black;
+
+        &.clone{
+
+          .delete{
+            margin-bottom: .5em;
+
+            button{
+              background: $red;
+              color: $text-w;
+              border-radius: 5px;
+              border: 1px solid $gray;
+              padding: 5px 10px;
+            }
+          }
+        }
+
+        .edu-year{
+          @media screen and (min-width:$md){
+            grid-template-columns: 35% 30% 30%!important;
+
+            .input-box:last-child{
+              display: flex;
+              align-items: center;
+              font-size: 1.2em;
+              margin-top: 20px;
+
+              >input{
+                width: 15px;
+                height: 15px;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      .add-edu,.add-lang,.add-exp{
+        p{
+          color: $blue;
+          cursor: pointer;
+          width: max-content;
+          margin: 0 auto;
+        }
+      }
+
+      .lang{
+        &.clone{
+          position: relative;
+
+          .delete{
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            color: $red;
+          }
+        }
+
+        .row-grid{
+          border-bottom: 1px dashed $black;
+          padding-bottom: 1em;
+
+          @media screen and (min-width:$md){
+            grid-template-columns: 28% 20% 20% 20%!important;
+          }
+
+          .input-box{
+            input,select{
+              padding: 5px 15px 5px 15px;
+            }
+          }
+        }
+      }
+
+      .exp-work{
+        border-bottom: 1px dashed $black;
+
+        &.clone{
+          .delete{
+            margin-bottom: .5em;
+
+            button{
+              background: $red;
+              color: $text-w;
+              border-radius: 5px;
+              border: 1px solid $gray;
+              padding: 5px 10px;
+            }
+          }
+        }
+
+        .date{
+          display: grid;
+          grid-template-columns: 100%;
+          grid-row-gap: 1em;
+          margin-bottom: 2em;
+
+          @media screen and (min-width:$md){
+            grid-template-columns: 47% 6% 47%;
+
+            span{
+              align-items: flex-end;
+              margin-bottom: 8px;
+            }
+          }
+
+          span{
+            display: flex;
+            justify-content: center;
+          }
+          .from,.to{
+            display: grid;
+            grid-template-columns: 59% 39%;
+            grid-column-gap: 2%;
+
+            input,select{
+              padding: 5px 15px 5px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .button-submit{
+    text-align: center;
+
+  }
+}

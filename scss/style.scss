@@ -48,6 +48,10 @@ li{
     background: $white;
     padding: 5px 40px 5px 15px;
 
+    &:focus{
+      border: 3px solid $darkblue!important;
+    }
+
     &.bd-blue{
       border: 1px solid #2792E0;
     }
@@ -117,6 +121,10 @@ li{
     border-radius: 18px;
     background: $white;
     padding: 5px 40px 5px 15px;
+
+    &.bd-blue{
+      border-color: $blue;
+    }
   }
 
   &.textarea{
@@ -126,6 +134,10 @@ li{
     background: $white;
     padding: 10px;
     resize: none;
+
+    &.bd-blue{
+      border-color: $blue;
+    }
   }
 }
 
@@ -215,7 +227,7 @@ li{
   border: unset;
   border-radius: 20px;
   background: $white;
-  box-shadow: 0 3px 5px #505050;
+  box-shadow: 0 3px 10px #b7b7b7
 }
 
 /////////////////////////////////////////////////////////////////

@@ -69,6 +69,10 @@ li {
   padding: 5px 40px 5px 15px;
 }
 
+.form-component.input:focus {
+  border: 3px solid #001981 !important;
+}
+
 .form-component.input.bd-blue {
   border: 1px solid #2792E0;
 }
@@ -148,6 +152,10 @@ li {
   padding: 5px 40px 5px 15px;
 }
 
+.form-component.select.bd-blue {
+  border-color: #2792E0;
+}
+
 .form-component.textarea {
   width: 100%;
   border: 1px solid #707070;
@@ -155,6 +163,10 @@ li {
   background: #fff;
   padding: 10px;
   resize: none;
+}
+
+.form-component.textarea.bd-blue {
+  border-color: #2792E0;
 }
 
 .nav-menu-active {
@@ -253,8 +265,8 @@ li {
   border: unset;
   border-radius: 20px;
   background: #fff;
-  -webkit-box-shadow: 0 3px 5px #505050;
-          box-shadow: 0 3px 5px #505050;
+  -webkit-box-shadow: 0 3px 10px #b7b7b7;
+          box-shadow: 0 3px 10px #b7b7b7;
 }
 
 header {
