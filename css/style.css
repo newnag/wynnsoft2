@@ -269,6 +269,26 @@ li {
           box-shadow: 0 3px 10px #b7b7b7;
 }
 
+.valid-error {
+  border: 3px solid #E30D12 !important;
+}
+
+.valid-error::-webkit-input-placeholder {
+  color: #E30D12;
+}
+
+.valid-error:-ms-input-placeholder {
+  color: #E30D12;
+}
+
+.valid-error::-ms-input-placeholder {
+  color: #E30D12;
+}
+
+.valid-error::placeholder {
+  color: #E30D12;
+}
+
 header {
   position: fixed;
   top: 0;

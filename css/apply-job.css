@@ -520,6 +520,10 @@
   }
 }
 
+.job-form .set-form .tem-form.show {
+  display: block;
+}
+
 .job-form .set-form .tem-form .head-form {
   text-align: center;
   margin: 1em 0;
@@ -897,6 +901,54 @@
 
 .job-form .set-form .form2 .exp-work .date .from input, .job-form .set-form .form2 .exp-work .date .from select, .job-form .set-form .form2 .exp-work .date .to input, .job-form .set-form .form2 .exp-work .date .to select {
   padding: 5px 15px 5px 15px;
+}
+
+.job-form .set-form .form3 .emer-contact .row-grid {
+  -ms-grid-columns: 65% 32% !important;
+      grid-template-columns: 65% 32% !important;
+}
+
+.job-form .set-form .form4 .agreement {
+  margin: 2em 0;
+}
+
+.job-form .set-form .form4 .agreement p {
+  text-indent: 40px;
+  padding: 0 1em;
+}
+
+@media screen and (min-width: 1280px) {
+  .job-form .set-form .form4 .agreement p {
+    padding: 0 4em;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .job-form .set-form .form4 .agreement p {
+    padding: 0 6em;
+  }
+}
+
+.job-form .set-form .form4 .agreement .checkbox {
+  margin: 1em 0;
+  padding: 0 1em;
+}
+
+@media screen and (min-width: 1280px) {
+  .job-form .set-form .form4 .agreement .checkbox {
+    padding: 0 4em;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .job-form .set-form .form4 .agreement .checkbox {
+    padding: 0 6em;
+  }
+}
+
+.job-form .set-form .form4 .agreement .checkbox label {
+  color: #2792E0;
+  font-weight: 400;
 }
 
 .job-form .button-submit {

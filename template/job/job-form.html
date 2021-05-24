@@ -333,7 +333,7 @@
       </div>
 
       <div class="set-form container mx-auto">
-        <div class="tem-form form1 hidden">
+        <div class="tem-form form1">
           <div class="head-form"><h2>ข้อมูลส่วนตัว</h2></div>
 
           <div class="box-upload">
@@ -364,7 +364,7 @@
               <div class="row-grid full">
                 <div class="input-box">
                   <label for="">ชื่อ-นามสกุล</label>
-                  <input type="text" class="form-component input bd-blue" placeholder="">
+                  <input type="text" name="name" id="name" class="form-component input bd-blue" placeholder="">
                 </div>
               </div>
             </div>
@@ -662,7 +662,7 @@
           </div>
         </div>
 
-        <div class="tem-form form2">
+        <div class="tem-form form2 hidden">
           <div class="head-form"><h2>ประวัติการศึกษา</h2></div>
 
           <div class="card">
@@ -995,9 +995,162 @@
             </div>
           </div>
         </div>
+
+        <div class="tem-form form3 hidden">
+          <div class="head-form"><h2>ความสามารถ / ภาษาโปรแกรมมิ่ง</h2></div>
+
+          <div class="card">
+            <div class="group-box">
+              <div class="row-grid full">
+                <div class="input-box">
+                  <label for="">ความสามารถ โปรแกรม/ภาษาโปรแกรมมิ่ง</label>
+                  <textarea name="" id="" cols="30" rows="6" class="form-component textarea bd-blue"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="group-box">
+              <div class="row-grid full">
+                <div class="input-box">
+                  <label for="">ความรู้พิเศษ/งานอดิเรก</label>
+                  <textarea name="" id="" cols="30" rows="6" class="form-component textarea bd-blue"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <p class="head-card">ความสามารถด้านการขับขี่พาหนะ</p>
+
+            <div class="group-box">
+              <div class="row-grid">
+                <div class="input-box">
+                  <label for="">สามารถไปปฏิบัติงานต่างจังหวัด</label>
+                  <div class="group-radio">
+                    <div class="radio">
+                      <input type="radio" name="other_province" id="other_prov_yes">
+                      <label for="other_prov_yes">ได้</label>
+                    </div>
+                    <div class="radio">
+                      <input type="radio" name="other_province" id="other_prov_no">
+                      <label for="other_prov_no">ไม่ได้</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="group-box">
+              <div class="row-grid full">
+                <div class="input-box">
+                  <label for="">ความสามารถในการขับขี่</label>
+                  <div class="group-radio">
+                    <div class="radio">
+                      <input type="checkbox" name="" id="drive_car1">
+                      <label for="drive_car1">รถยนต์</label>
+                    </div>
+                    <div class="radio">
+                      <input type="checkbox" name="" id="drive_car2">
+                      <label for="drive_car2">รถจักรยานยนต์</label>
+                    </div>
+                    <div class="radio">
+                      <input type="checkbox" name="" id="drive_car3">
+                      <label for="drive_car3">รถบรรทุก</label>
+                    </div>
+                    <div class="radio">
+                      <input type="checkbox" name="" id="drive_car4">
+                      <label for="drive_car4">รถกระบะ</label>
+                    </div>
+                    <div class="radio">
+                      <input type="checkbox" name="" id="drive_car5">
+                      <label for="drive_car5">รถโฟล์คลิฟท์</label>
+                    </div>
+                    <div class="radio">
+                      <input type="checkbox" name="" id="drive_car6">
+                      <label for="drive_car6">รถไฟ</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="group-box">
+              <div class="row-grid full">
+                <div class="input-box">
+                  <label for="">มีพาหนะส่วนตัว</label>
+                  <div class="group-radio">
+                    <div class="radio">
+                      <input type="checkbox" name="" id="have_car1">
+                      <label for="have_car1">รถยนต์</label>
+                    </div>
+                    <div class="radio">
+                      <input type="checkbox" name="" id="have_car2">
+                      <label for="have_car2">รถจักรยานยนต์</label>
+                    </div>
+                    <div class="radio">
+                      <input type="checkbox" name="" id="have_car3">
+                      <label for="have_car3">รถบรรทุก</label>
+                    </div>
+                    <div class="radio">
+                      <input type="checkbox" name="" id="have_car4">
+                      <label for="have_car4">รถกระบะ</label>
+                    </div>
+                    <div class="radio">
+                      <input type="checkbox" name="" id="have_car5">
+                      <label for="have_car5">รถโฟล์คลิฟท์</label>
+                    </div>
+                    <div class="radio">
+                      <input type="checkbox" name="" id="have_car6">
+                      <label for="have_car6">รถไฟ</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="group-box">
+              <div class="row-grid full">
+                <div class="input-box">
+                  <label for="">เลขใบขับขี่</label>
+                  <input type="text" class="form-component input bd-blue" name="" id="">
+                </div>
+              </div>
+            </div>
+
+            <div class="group-box emer-contact">
+              <div class="row-grid">
+                <div class="input-box">
+                  <label for="">กรณีฉุกเฉิน บุคคลที่สามารถติดต่อได้ (ชื่อ-สกุล)</label>
+                  <input type="text" class="form-component input bd-blue" name="" id="">
+                </div>
+
+                <div class="input-box">
+                  <label for="">เกี่ยวข้องเป็น</label>
+                  <input type="text" class="form-component input bd-blue" name="" id="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tem-form form4 hidden">
+          <div class="head-form"><h2>ข้อตกลง</h2></div>
+
+          <div class="agreement">
+            <p>
+              ข้าพเจ้าขอรับรองว่า ข้อความดังกล่าวทั้งหมดในใบสมัครนี้เป็นความจริงทุกประการ
+              หลังจากบริษัท จ้างเข้ามาทำงานแล้วปรากฏว่า ข้อควาในในใบสมัครงานและเอกสารที่นำมาแสดงหรือรายละเอียด
+              ที่ให้ไว้ไม่เป็นความจริง บริษัท มีสิทธิ์ที่จะเลิกจ้างข้าพเจ้าได้โดยไม่ต้องจ่ายเงินชดเชย หรือค่าเสียหายใดๆทั้งสิ้น
+            </p>
+            <div class="checkbox">
+              <input type="checkbox" name="" id="agreement">
+              <label for="agreement">ตกลง</label>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="button-submit"><button class="form-component button btn-primary">หน้าถัดไป</button></div>
+      <div class="button-submit" data-step="1" onclick="step_form(this)"><button class="form-component button btn-primary">หน้าถัดไป</button></div>
     </div>
   </main>
 
@@ -1100,8 +1253,10 @@
     </div>
   </footer>
 
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://kit.fontawesome.com/37e3c13129.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/plugin/zenscroll/zenscroll-min.js"></script>
   <script src="/js/main.js?v=0.1.6"></script>
   <script src="/js/job.js"></script>
 </body>

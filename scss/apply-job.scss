@@ -442,6 +442,10 @@
     }
 
     .tem-form{
+      &.show{
+        display: block;
+      }
+
       .head-form{
         text-align: center;
         margin: 1em 0;
@@ -757,6 +761,49 @@
             input,select{
               padding: 5px 15px 5px 15px;
             }
+          }
+        }
+      }
+    }
+
+    .form3{
+      .emer-contact{
+        .row-grid{
+          grid-template-columns: 65% 32%!important;
+        }
+      }
+    }
+
+    .form4{
+      .agreement{
+        margin: 2em 0;
+
+        p{
+          text-indent: 40px;
+          padding: 0 1em;
+
+          @media screen and (min-width:$xl){
+            padding: 0 4em;
+          }
+          @media screen and (min-width:$xxl){
+            padding: 0 6em;
+          }
+        }
+
+        .checkbox{
+          margin: 1em 0;
+          padding: 0 1em;
+
+          @media screen and (min-width:$xl){
+            padding: 0 4em;
+          }
+          @media screen and (min-width:$xxl){
+            padding: 0 6em;
+          }
+
+          label{
+            color: $blue;
+            font-weight: 400;
           }
         }
       }
