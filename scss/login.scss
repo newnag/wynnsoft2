@@ -107,6 +107,8 @@
       }
 
       .right{
+        margin: auto 0;
+
         .login-social{
           padding: 2em 0;
 
@@ -196,6 +198,32 @@
       }
     }
 
+    .form-forget{
+      width: 250px;
+      margin: 2em auto;
+
+      @media screen and (min-width:$md){
+        width: 350px;
+      }
+      @media screen and (min-width:$xl){
+        width: 400px;
+      }
+
+      .button-send{
+        margin-top: 2em;
+        text-align: center;
+      }
+
+      .ps{
+        margin-top: 2em;
+
+        p{
+          font-size: .9em;
+          color: $text-w;
+        }
+      }
+    }
+
     .bg{
       display: none;
       position: absolute;
@@ -213,6 +241,396 @@
         width: 100%;
         height: 100%;
         border-radius: 10px;
+      }
+    }
+  }
+}
+
+.profile{
+  padding: 2em 0;
+
+  @media screen and (min-width:$md){
+    padding: 4em;
+  }
+  @media screen and (min-width:$lg){
+    padding: 4em 12em;
+  }
+  @media screen and (min-width:$xl){
+    padding: 4em 16em;
+  }
+
+  .card{
+    padding: 1em;
+    margin-bottom: 2em;
+
+    @media screen and (min-width:$md){
+      padding: 2em;
+    }
+    @media screen and (min-width:$xl){
+      padding: 3em 4em;
+    }
+
+    .head-card{
+      font-weight: 500;
+      color: $text-w;
+      margin-bottom: 2em;
+
+      @media screen and (min-width:$xl){
+        font-size: 1.2em;
+      }
+    }
+
+    .form{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-row-gap: 2em;
+
+      .input-box{
+        display: grid;
+        grid-template-columns: 20% 70%;
+        grid-row-gap: 1em;
+        align-items: center;
+
+        @media screen and (min-width:$md){
+          grid-template-columns: 10% 60% 30%;
+        }
+
+        label{
+          color: $text-w;
+        }
+        input{
+          padding: 5px;
+        }
+        .button{
+          grid-column: 1/3;
+          text-align: right;
+
+          @media screen and (min-width:$md){
+            grid-column: unset;
+            text-align: left;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    &.social{
+      background: #d7eeff;
+
+      .head-card{
+        color: $darkblue;
+      }
+
+      .list-social{
+        .list{
+          border-bottom: 2px solid $blue;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1em;
+          padding-bottom: 1em;
+
+          &:last-child{
+            border-bottom: unset;
+            margin-bottom: unset;
+            padding-bottom: unset;
+          }
+
+          .left{
+            display: flex;
+            align-items: center;
+
+            .icon{
+              width: 50px;
+
+              img{
+                max-width: 60px;
+                height: 30px;
+                margin: 0 auto;
+              }
+            }
+
+            .name{
+              p:first-child{
+                color: $darkblue;
+              }
+              p:last-child{
+                color: $blue;
+                font-size: .9em;
+              }
+            }
+          }
+
+          .right{
+            .enable{
+              background: $blue;
+              color: $text-w;
+              border: 1px solid $blue;
+            }
+            .disable{
+              background: $red;
+              color: $text-w;
+              border: 1px solid $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.history{
+  padding: 2em 0;
+
+  @media screen and (min-width:$lg){
+    padding: 4em 0;
+  }
+
+  .grid-history{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 1em;
+    margin: 2em 0;
+    padding: 0 1em;
+
+    @media screen and (min-width:$lg){
+      margin: 4em 0;
+    }
+    @media screen and (min-width:$xl){
+      padding: 0 6em;
+    }
+    @media screen and (min-width:$xxl){
+      padding: 0 8em;
+    }
+
+    .list-item{
+      display: grid;
+      grid-template-columns: 65% 50% 50% 60% 50% 45%;
+      overflow-x: auto;
+      background: #d6eeff;
+      border: 2px solid $blue;
+      border-radius: 10px;
+      padding: 1em 2em;
+
+      @media screen and (min-width:$md){
+        grid-template-columns: 25% 20% 25% 25% 20% 25%;
+      }
+      @media screen and (min-width:$lg){
+        grid-template-columns: 20% 15% 18% 19% 17% 17%;
+      }
+      @media screen and (min-width:$xl){
+        grid-template-columns: 18% 14% 15% 17% 12% 18%;
+        justify-content: center;
+      }
+
+      .picture{
+        display: flex;
+        align-items: center;
+
+        img{
+          width: 150px;
+          height: 90px;
+          border-radius: 5px;
+        }
+      }
+
+      .package{
+        .type{
+          p{
+            color: $blue;
+            font-size: 1.2em;
+            font-weight: 500;
+          }
+        }
+
+        .name{
+          p{
+            color: $blue;
+          }
+        }
+
+        .icon{
+          img{
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .date-start,.date-end,.price{
+        p:first-child{
+          color: $blue;
+          font-size: 1.2em;
+          font-weight: 500;
+        }
+        p:last-child{
+          color: $blue;
+        }
+      }
+
+      .price{
+        border-right: 2px solid $blue;
+      }
+
+      .button-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        button{
+          margin: .5em 0;
+          width: 100px;
+
+          @media screen and (min-width:$xl) {
+            width: 160px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mydesign{
+  padding: 2em 0;
+
+  @media screen and (min-width:$lg){
+    padding: 4em 0;
+  }
+
+  .select-type{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media screen and (min-width:$md){
+      padding: 0 1em;
+    }
+    @media screen and (min-width:$lg){
+      padding: 0 6em;
+    }
+
+    .box-select{
+      display: flex;
+      border: 2px solid $blue;
+      border-radius: 20px;
+
+      .choice{
+        background: inherit;
+        color: $blue;
+        width: 100px;
+        text-align: center;
+        padding: .5em;
+        cursor: pointer;
+
+        &:nth-child(1){
+          border-radius: 15px 0 0 15px;
+        }
+        &:nth-child(2){
+          border-radius: 0 15px 15px 0;
+        }
+
+        &.active{
+          background: $blue;
+          color: $text-w;
+        }
+      }
+    }
+  }
+
+  .grid-design{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 1em;
+    padding: 0 1em;
+    margin-top: 2em;
+
+    &.Hidden{
+      display: none;
+    }
+
+    @media screen and (min-width:$lg){
+      padding: 1em 6em;
+    }
+
+    .list-item{
+      display: grid;
+      grid-template-columns: 60% 100% 80%;
+      overflow-x: auto;
+      background: #d6eeff;
+      border: 2px solid $blue;
+      border-radius: 10px;
+      padding: 1em 2em;
+
+      @media screen and (min-width:$md){
+        grid-template-columns: 25% 48% 29%;
+      }
+      @media screen and (min-width:$lg){
+        grid-template-columns: 20% 53% 29%;
+      }
+      @media screen and (min-width:$xl){
+        grid-template-columns: 22% 55% 29%;
+        padding: 1em 6em;
+      }
+      @media screen and (min-width:$xl){
+        grid-template-columns: 18% 60% 29%;
+      }
+
+      .picture{
+        display: flex;
+        align-items: center;
+
+        img{
+          width: 150px;
+          height: 90px;
+          border-radius: 5px;
+
+          @media screen and (min-width:$xl){
+            width: 180px;
+            height: 110px;
+          }
+        }
+      }
+
+      .package{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-right: 2px solid $blue;
+
+        .name{
+          p{
+            color: $darkblue;
+            font-size: 1.4em;
+            font-weight: 400;
+          }
+        }
+        .url,.package-type,.delete{
+          p{
+            color: $blue;
+          }
+        }
+        .delete{
+          p{
+            width: max-content;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .button-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        button{
+          margin: .5em 0;
+          width: 150px;
+
+          @media screen and (min-width:$xl) {
+            width: 160px;
+          }
+        }
       }
     }
   }

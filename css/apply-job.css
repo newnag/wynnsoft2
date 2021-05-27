@@ -415,12 +415,19 @@
 }
 
 .job-detail .map {
-  margin: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .job-detail .map iframe {
   width: 100% !important;
   height: 200px;
+}
+
+@media screen and (min-width: 1024px) {
+  .job-detail .map iframe {
+    height: 400px;
+  }
 }
 
 .job-form {

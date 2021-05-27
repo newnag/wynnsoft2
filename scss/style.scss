@@ -112,6 +112,19 @@ li{
         }
       }
     }
+    &.btn-white{
+      border: 1px solid #fff;
+      background: #fff;
+      color: $blue;
+
+      @media (hover:hover){
+        &:hover{
+          background: $blue;
+          color: $text-w;
+          transition: .3s;
+        }
+      }
+    }
   }
 
   &.select{
@@ -187,7 +200,7 @@ li{
   }
 }
 
-.pagi{
+.pagination{
   display: flex;
   justify-content: center;
   margin: 2em 0;

@@ -168,7 +168,7 @@
       }
     }
 
-    .pagi{
+    >.pagi{
       position: absolute;
       top: 25%;
       right: 1%;
@@ -566,11 +566,21 @@
             color: $yellow;
             font-size: 2em;
           }
+          &.swiper-button-disabled{
+            &:after{
+              color: $gray;
+            }
+          }
         }
         .swiper-button-prev{
           &:after{
-            color: $gray;
+            color: $yellow;
             font-size: 2em;
+          }
+          &.swiper-button-disabled{
+            &:after{
+              color: $gray;
+            }
           }
         }
       }
@@ -863,14 +873,14 @@
         }
 
         &.full{
-          @media screen and (min-width:$md){
+          @media screen and (min-width:$sm){
             grid-column: 1/3;
           }
         }
       }
 
       .button-submit{
-        @media screen and (min-width:$md){
+        @media screen and (min-width:$sm){
           grid-column: 1/3;
         }
 
@@ -892,10 +902,11 @@
       @media screen and (min-width:$sm){
         grid-template-columns: repeat(2,1fr);
         grid-column-gap: 2em;
-        padding: 0 4em;
+        padding: 0 1em;
       }
       @media screen and (min-width:$lg){
         grid-template-columns: repeat(3,1fr);
+        padding: 0 4em;
       }
       @media screen and (min-width:$xl){
         grid-template-columns: repeat(5,18.1%);

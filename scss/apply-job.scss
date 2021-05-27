@@ -352,11 +352,16 @@
   }
 
   .map{
-    margin: 2em 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
 
     iframe{
       width: 100%!important;
       height: 200px;
+
+      @media screen and (min-width:$lg){
+        height: 400px;
+      }
     }
   }
 }

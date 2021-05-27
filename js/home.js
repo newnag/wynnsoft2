@@ -16,7 +16,7 @@ function slide_home(){
 // สไลด์บริการ
 function slide_service(){
   let swiper = new Swiper(".slide-service", {
-    spaceBetween: 30,
+    spaceBetween: 45,
     centeredSlides: false,
     navigation: {
       nextEl: ".swiper-button-next",
