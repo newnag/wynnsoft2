@@ -262,6 +262,7 @@ header{
   width: 100%;
   z-index: 6;
   background: $white;
+  box-shadow: 0px 4px 10px #ababab;
 
   @media screen and (min-width:$xl){
     border-bottom: 1px solid $darkblue;
@@ -1000,6 +1001,14 @@ header{
               li:hover{
                 >a{
                   color: $yellow;
+                }
+
+                &:nth-child(2){
+                  .submenu{
+                    &.column2{
+                      grid-template-columns: 1fr .5fr;
+                    }
+                  }
                 }
   
                 .submenu{

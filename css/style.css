@@ -311,6 +311,8 @@ header {
   width: 100%;
   z-index: 6;
   background: #fff;
+  -webkit-box-shadow: 0px 4px 10px #ababab;
+          box-shadow: 0px 4px 10px #ababab;
 }
 
 @media screen and (min-width: 1280px) {
@@ -1141,6 +1143,10 @@ header .header nav {
 @media screen and (min-width: 1280px) and (hover: hover) {
   header .header nav .menu-nav .bottom-menu li:hover > a {
     color: #FFD965;
+  }
+  header .header nav .menu-nav .bottom-menu li:hover:nth-child(2) .submenu.column2 {
+    -ms-grid-columns: 1fr .5fr;
+        grid-template-columns: 1fr .5fr;
   }
   header .header nav .menu-nav .bottom-menu li:hover .submenu {
     top: 100%;
