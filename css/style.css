@@ -70,7 +70,9 @@ li {
 }
 
 .form-component.input:focus {
-  border: 3px solid #001981 !important;
+  border: 1px solid #001981 !important;
+  -webkit-box-shadow: 0px 0px 5px #000;
+          box-shadow: 0px 0px 5px #000;
 }
 
 .form-component.input.bd-blue {
@@ -87,6 +89,11 @@ li {
   padding: 5px 15px;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+.form-component.button:focus {
+  -webkit-box-shadow: inset 0px 0px 10px #353535;
+          box-shadow: inset 0px 0px 10px #353535;
 }
 
 @media (hover: hover) {
@@ -167,6 +174,12 @@ li {
   padding: 5px 40px 5px 15px;
 }
 
+.form-component.select:focus {
+  border: 1px solid #001981 !important;
+  -webkit-box-shadow: 0px 0px 5px #000;
+          box-shadow: 0px 0px 5px #000;
+}
+
 .form-component.select.bd-blue {
   border-color: #2792E0;
 }
@@ -178,6 +191,12 @@ li {
   background: #fff;
   padding: 10px;
   resize: none;
+}
+
+.form-component.textarea:focus {
+  border: 1px solid #001981 !important;
+  -webkit-box-shadow: 0px 0px 5px #000;
+          box-shadow: 0px 0px 5px #000;
 }
 
 .form-component.textarea.bd-blue {
@@ -311,6 +330,9 @@ header {
   width: 100%;
   z-index: 6;
   background: #fff;
+}
+
+header.shadow {
   -webkit-box-shadow: 0px 4px 10px #ababab;
           box-shadow: 0px 4px 10px #ababab;
 }

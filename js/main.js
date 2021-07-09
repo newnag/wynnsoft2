@@ -70,3 +70,13 @@ function open_li(that){
 function mobile_open_menu_footer(that){
   that.closest('.list').querySelector('ul').classList.toggle('show')
 }
+
+// แสดงเงาที่ header เมื่อเลื่อนจอลงมา
+window.onscroll = function(ev) {
+  if(window.scrollY >= 600) {
+    document.querySelector('header').classList.add('shadow')
+  }
+  else{
+    document.querySelector('header').classList.remove('shadow')
+  }
+};

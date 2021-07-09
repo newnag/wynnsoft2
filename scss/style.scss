@@ -49,7 +49,8 @@ li{
     padding: 5px 40px 5px 15px;
 
     &:focus{
-      border: 3px solid $darkblue!important;
+      border: 1px solid $darkblue!important;
+      box-shadow: 0px 0px 5px #000;
     }
 
     &.bd-blue{
@@ -64,6 +65,10 @@ li{
     border: 1px solid #707070;
     padding: 5px 15px;
     transition: .3s;
+
+    &:focus{
+      box-shadow: inset 0px 0px 10px #353535;
+    }
 
     @media (hover:hover){
       &:hover{
@@ -135,6 +140,11 @@ li{
     background: $white;
     padding: 5px 40px 5px 15px;
 
+    &:focus{
+      border: 1px solid $darkblue!important;
+      box-shadow: 0px 0px 5px #000;
+    }
+
     &.bd-blue{
       border-color: $blue;
     }
@@ -147,6 +157,11 @@ li{
     background: $white;
     padding: 10px;
     resize: none;
+
+    &:focus{
+      border: 1px solid $darkblue!important;
+      box-shadow: 0px 0px 5px #000;
+    }
 
     &.bd-blue{
       border-color: $blue;
@@ -262,7 +277,10 @@ header{
   width: 100%;
   z-index: 6;
   background: $white;
-  box-shadow: 0px 4px 10px #ababab;
+
+  &.shadow{
+    box-shadow: 0px 4px 10px #ababab;
+  }
 
   @media screen and (min-width:$xl){
     border-bottom: 1px solid $darkblue;
