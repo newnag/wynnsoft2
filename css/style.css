@@ -486,6 +486,12 @@ header .header nav {
     padding: 1em 0;
     position: relative;
   }
+  header .header nav .menu-nav .top-menu li:nth-child(2) a:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f078';
+    margin-left: 10px;
+  }
 }
 
 @media screen and (max-width: 1023px) and (min-width: 768px) {
@@ -959,6 +965,12 @@ header .header nav {
   header .header nav .menu-nav .bottom-menu li {
     padding: 1em 0;
     position: relative;
+  }
+  header .header nav .menu-nav .bottom-menu li:not(:first-child) a:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f078';
+    margin-left: 10px;
   }
 }
 

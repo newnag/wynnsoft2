@@ -404,6 +404,17 @@ header{
             li{
               padding: 1em 0;
               position: relative;
+
+              &:nth-child(2){
+                a{
+                  &:after{
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 900;
+                    content: '\f078';
+                    margin-left: 10px;
+                  }
+                }
+              }
   
               @media screen and (min-width:$md){
                 padding: 1.3em 0;
@@ -846,6 +857,17 @@ header{
             li{
               padding: 1em 0;
               position: relative;
+
+              &:not(:first-child){
+                a{
+                  &:after{
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 900;
+                    content: '\f078';
+                    margin-left: 10px;
+                  }
+                }
+              }
   
               @media screen and (min-width:$md){
                 padding: 1.3em 0;
@@ -853,7 +875,7 @@ header{
   
               a{
                 color: $text-w;
-  
+
                 @media screen and (min-width:$md) and (max-width:($xl)-1px){
                   font-size: 1.2em;
                 }
@@ -862,7 +884,7 @@ header{
                   border-bottom: 2px solid $red;
                 }
               }
-  
+
               .submenu{
                 position: absolute;
                 left: 0;
